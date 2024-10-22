@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EF7F41932CC7D90F00596E39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7F418B2CC7D90F00596E39 /* Preview Assets.xcassets */; };
+		EF7F41942CC7D90F00596E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7F418D2CC7D90F00596E39 /* Assets.xcassets */; };
+		EF7F41952CC7D90F00596E39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F41902CC7D90F00596E39 /* ContentView.swift */; };
+		EF7F41962CC7D90F00596E39 /* KanshoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F41912CC7D90F00596E39 /* KanshoApp.swift */; };
+		EF7F41992CC7D91200596E39 /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F41972CC7D91200596E39 /* KanshoTests.swift */; };
+		EF7F419D2CC7D91400596E39 /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F419A2CC7D91400596E39 /* KanshoUITests.swift */; };
+		EF7F419E2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F419B2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EF7F532F2CC16BF300286047 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,28 +34,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF7F418B2CC7D90F00596E39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF7F418D2CC7D90F00596E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF7F41902CC7D90F00596E39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF7F41912CC7D90F00596E39 /* KanshoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoApp.swift; sourceTree = "<group>"; };
+		EF7F41972CC7D91200596E39 /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
+		EF7F419A2CC7D91400596E39 /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
+		EF7F419B2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF7F531E2CC16BF100286047 /* Kansho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kansho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F532E2CC16BF300286047 /* KanshoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F53382CC16BF300286047 /* KanshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EF7F53202CC16BF100286047 /* Kansho */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Kansho;
-			sourceTree = "<group>";
-		};
-		EF7F53312CC16BF300286047 /* KanshoTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KanshoTests;
-			sourceTree = "<group>";
-		};
-		EF7F533B2CC16BF300286047 /* KanshoUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KanshoUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EF7F531B2CC16BF100286047 /* Frameworks */ = {
@@ -72,12 +71,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF7F418C2CC7D90F00596E39 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F418B2CC7D90F00596E39 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF7F418E2CC7D90F00596E39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F418C2CC7D90F00596E39 /* Preview Content */,
+				EF7F418D2CC7D90F00596E39 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF7F418F2CC7D90F00596E39 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EF7F41922CC7D90F00596E39 /* Kansho */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F41912CC7D90F00596E39 /* KanshoApp.swift */,
+				EF7F41902CC7D90F00596E39 /* ContentView.swift */,
+				EF7F41A02CC7D94800596E39 /* Constant */,
+				EF7F419F2CC7D93100596E39 /* Infrastructures */,
+				EF7F418F2CC7D90F00596E39 /* Modules */,
+				EF7F418E2CC7D90F00596E39 /* Resources */,
+				EF7F41A12CC7D97600596E39 /* ReusableComponents */,
+			);
+			path = Kansho;
+			sourceTree = "<group>";
+		};
+		EF7F41982CC7D91200596E39 /* KanshoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F41972CC7D91200596E39 /* KanshoTests.swift */,
+			);
+			path = KanshoTests;
+			sourceTree = "<group>";
+		};
+		EF7F419C2CC7D91400596E39 /* KanshoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F419A2CC7D91400596E39 /* KanshoUITests.swift */,
+				EF7F419B2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift */,
+			);
+			path = KanshoUITests;
+			sourceTree = "<group>";
+		};
+		EF7F419F2CC7D93100596E39 /* Infrastructures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructures;
+			sourceTree = "<group>";
+		};
+		EF7F41A02CC7D94800596E39 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		EF7F41A12CC7D97600596E39 /* ReusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
 		EF7F53152CC16BF100286047 = {
 			isa = PBXGroup;
 			children = (
-				EF7F53202CC16BF100286047 /* Kansho */,
-				EF7F53312CC16BF300286047 /* KanshoTests */,
-				EF7F533B2CC16BF300286047 /* KanshoUITests */,
+				EF7F41922CC7D90F00596E39 /* Kansho */,
+				EF7F41982CC7D91200596E39 /* KanshoTests */,
+				EF7F419C2CC7D91400596E39 /* KanshoUITests */,
 				EF7F531F2CC16BF100286047 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,9 +182,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				EF7F53202CC16BF100286047 /* Kansho */,
-			);
 			name = Kansho;
 			packageProductDependencies = (
 			);
@@ -130,9 +202,6 @@
 			dependencies = (
 				EF7F53302CC16BF300286047 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				EF7F53312CC16BF300286047 /* KanshoTests */,
-			);
 			name = KanshoTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +221,6 @@
 			);
 			dependencies = (
 				EF7F533A2CC16BF300286047 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				EF7F533B2CC16BF300286047 /* KanshoUITests */,
 			);
 			name = KanshoUITests;
 			packageProductDependencies = (
@@ -212,6 +278,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7F41932CC7D90F00596E39 /* Preview Assets.xcassets in Resources */,
+				EF7F41942CC7D90F00596E39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7F41952CC7D90F00596E39 /* ContentView.swift in Sources */,
+				EF7F41962CC7D90F00596E39 /* KanshoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7F41992CC7D91200596E39 /* KanshoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7F419D2CC7D91400596E39 /* KanshoUITests.swift in Sources */,
+				EF7F419E2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,15 +468,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Kansho/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kansho/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Kansho;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,15 +501,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Kansho/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kansho/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Kansho;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
