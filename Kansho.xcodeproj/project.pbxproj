@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF7F41932CC7D90F00596E39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7F418B2CC7D90F00596E39 /* Preview Assets.xcassets */; };
-		EF7F41942CC7D90F00596E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7F418D2CC7D90F00596E39 /* Assets.xcassets */; };
-		EF7F41952CC7D90F00596E39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F41902CC7D90F00596E39 /* ContentView.swift */; };
-		EF7F41962CC7D90F00596E39 /* KanshoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F41912CC7D90F00596E39 /* KanshoApp.swift */; };
-		EF7F41992CC7D91200596E39 /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F41972CC7D91200596E39 /* KanshoTests.swift */; };
-		EF7F419D2CC7D91400596E39 /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F419A2CC7D91400596E39 /* KanshoUITests.swift */; };
-		EF7F419E2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F419B2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift */; };
+		EF08E6C32CC91D6D00905CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */; };
+		EF08E6C42CC91D6D00905CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */; };
+		EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C02CC91D6D00905CCB /* ContentView.swift */; };
+		EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C12CC91D6D00905CCB /* KanshoApp.swift */; };
+		EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C72CC91D7000905CCB /* KanshoTests.swift */; };
+		EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */; };
+		EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */; };
+		EF26B9FB2CCA783D007C3CD8 /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */; };
+		EF26B9FC2CCA783D007C3CD8 /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */; };
+		EF26B9FD2CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F12CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf */; };
+		EF26B9FE2CCA783D007C3CD8 /* AvenirLTStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F62CCA783D007C3CD8 /* AvenirLTStd-Medium.otf */; };
+		EF26B9FF2CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F32CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf */; };
+		EF26BA002CCA783D007C3CD8 /* AvenirLTStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F42CCA783D007C3CD8 /* AvenirLTStd-Light.otf */; };
+		EF26BA012CCA783D007C3CD8 /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F92CCA783D007C3CD8 /* AvenirLTStd-Roman.otf */; };
+		EF26BA022CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F52CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf */; };
+		EF26BA032CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F82CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf */; };
+		EF26BA042CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9EF2CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf */; };
+		EF26BA052CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F22CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf */; };
+		EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */; };
+		EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */; };
+		EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +48,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EF7F418B2CC7D90F00596E39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EF7F418D2CC7D90F00596E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF7F41902CC7D90F00596E39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EF7F41912CC7D90F00596E39 /* KanshoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoApp.swift; sourceTree = "<group>"; };
-		EF7F41972CC7D91200596E39 /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
-		EF7F419A2CC7D91400596E39 /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
-		EF7F419B2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF08E6C02CC91D6D00905CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF08E6C12CC91D6D00905CCB /* KanshoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoApp.swift; sourceTree = "<group>"; };
+		EF08E6C72CC91D7000905CCB /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
+		EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
+		EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
+		EF26B9EF2CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-BlackOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
+		EF26B9F12CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-BookOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F22CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Heavy.otf"; sourceTree = "<group>"; };
+		EF26B9F32CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-HeavyOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F42CCA783D007C3CD8 /* AvenirLTStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Light.otf"; sourceTree = "<group>"; };
+		EF26B9F52CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-LightOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F62CCA783D007C3CD8 /* AvenirLTStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Medium.otf"; sourceTree = "<group>"; };
+		EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-MediumOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F82CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Oblique.otf"; sourceTree = "<group>"; };
+		EF26B9F92CCA783D007C3CD8 /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
+		EF26BA072CCA7872007C3CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Avenir.swift"; sourceTree = "<group>"; };
+		EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
 		EF7F531E2CC16BF100286047 /* Kansho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kansho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F532E2CC16BF300286047 /* KanshoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F53382CC16BF300286047 /* KanshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,88 +100,143 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF7F418C2CC7D90F00596E39 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				EF7F418B2CC7D90F00596E39 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		EF7F418E2CC7D90F00596E39 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EF7F418C2CC7D90F00596E39 /* Preview Content */,
-				EF7F418D2CC7D90F00596E39 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		EF7F418F2CC7D90F00596E39 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		EF7F41922CC7D90F00596E39 /* Kansho */ = {
-			isa = PBXGroup;
-			children = (
-				EF7F41912CC7D90F00596E39 /* KanshoApp.swift */,
-				EF7F41902CC7D90F00596E39 /* ContentView.swift */,
-				EF7F41A02CC7D94800596E39 /* Constant */,
-				EF7F419F2CC7D93100596E39 /* Infrastructures */,
-				EF7F418F2CC7D90F00596E39 /* Modules */,
-				EF7F418E2CC7D90F00596E39 /* Resources */,
-				EF7F41A12CC7D97600596E39 /* ReusableComponents */,
-			);
-			path = Kansho;
-			sourceTree = "<group>";
-		};
-		EF7F41982CC7D91200596E39 /* KanshoTests */ = {
-			isa = PBXGroup;
-			children = (
-				EF7F41972CC7D91200596E39 /* KanshoTests.swift */,
-			);
-			path = KanshoTests;
-			sourceTree = "<group>";
-		};
-		EF7F419C2CC7D91400596E39 /* KanshoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EF7F419A2CC7D91400596E39 /* KanshoUITests.swift */,
-				EF7F419B2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift */,
-			);
-			path = KanshoUITests;
-			sourceTree = "<group>";
-		};
-		EF7F419F2CC7D93100596E39 /* Infrastructures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Infrastructures;
-			sourceTree = "<group>";
-		};
-		EF7F41A02CC7D94800596E39 /* Constant */ = {
+		EF08E6B82CC91D6D00905CCB /* Constant */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Constant;
 			sourceTree = "<group>";
 		};
-		EF7F41A12CC7D97600596E39 /* ReusableComponents */ = {
+		EF08E6B92CC91D6D00905CCB /* Infrastructures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructures;
+			sourceTree = "<group>";
+		};
+		EF08E6BA2CC91D6D00905CCB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EF26BA0B2CCA86D0007C3CD8 /* Relax */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EF08E6BC2CC91D6D00905CCB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF08E6BE2CC91D6D00905CCB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF08E6BC2CC91D6D00905CCB /* Preview Content */,
+				EF26B9EC2CCA77D0007C3CD8 /* Fonts */,
+				EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF08E6BF2CC91D6D00905CCB /* ReusableComponents */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
 		};
+		EF08E6C22CC91D6D00905CCB /* Kansho */ = {
+			isa = PBXGroup;
+			children = (
+				EF26BA072CCA7872007C3CD8 /* Info.plist */,
+				EF08E6C12CC91D6D00905CCB /* KanshoApp.swift */,
+				EF08E6C02CC91D6D00905CCB /* ContentView.swift */,
+				EF08E6B82CC91D6D00905CCB /* Constant */,
+				EF26BA082CCA7BA1007C3CD8 /* Extensions */,
+				EF08E6B92CC91D6D00905CCB /* Infrastructures */,
+				EF08E6BA2CC91D6D00905CCB /* Modules */,
+				EF08E6BE2CC91D6D00905CCB /* Resources */,
+				EF08E6BF2CC91D6D00905CCB /* ReusableComponents */,
+			);
+			path = Kansho;
+			sourceTree = "<group>";
+		};
+		EF08E6C82CC91D7000905CCB /* KanshoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF08E6C72CC91D7000905CCB /* KanshoTests.swift */,
+			);
+			path = KanshoTests;
+			sourceTree = "<group>";
+		};
+		EF08E6CC2CC91D7200905CCB /* KanshoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */,
+				EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */,
+			);
+			path = KanshoUITests;
+			sourceTree = "<group>";
+		};
+		EF26B9EC2CCA77D0007C3CD8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF26B9FA2CCA783D007C3CD8 /* Avenir */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EF26B9FA2CCA783D007C3CD8 /* Avenir */ = {
+			isa = PBXGroup;
+			children = (
+				EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */,
+				EF26B9EF2CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf */,
+				EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */,
+				EF26B9F12CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf */,
+				EF26B9F22CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf */,
+				EF26B9F32CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf */,
+				EF26B9F42CCA783D007C3CD8 /* AvenirLTStd-Light.otf */,
+				EF26B9F52CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf */,
+				EF26B9F62CCA783D007C3CD8 /* AvenirLTStd-Medium.otf */,
+				EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */,
+				EF26B9F82CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf */,
+				EF26B9F92CCA783D007C3CD8 /* AvenirLTStd-Roman.otf */,
+			);
+			path = Avenir;
+			sourceTree = "<group>";
+		};
+		EF26BA082CCA7BA1007C3CD8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF26BA0B2CCA86D0007C3CD8 /* Relax */ = {
+			isa = PBXGroup;
+			children = (
+				EF26BA0C2CCA86D6007C3CD8 /* View */,
+			);
+			path = Relax;
+			sourceTree = "<group>";
+		};
+		EF26BA0C2CCA86D6007C3CD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EF7F53152CC16BF100286047 = {
 			isa = PBXGroup;
 			children = (
-				EF7F41922CC7D90F00596E39 /* Kansho */,
-				EF7F41982CC7D91200596E39 /* KanshoTests */,
-				EF7F419C2CC7D91400596E39 /* KanshoUITests */,
+				EF08E6C22CC91D6D00905CCB /* Kansho */,
+				EF08E6C82CC91D7000905CCB /* KanshoTests */,
+				EF08E6CC2CC91D7200905CCB /* KanshoUITests */,
 				EF7F531F2CC16BF100286047 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -278,8 +362,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7F41932CC7D90F00596E39 /* Preview Assets.xcassets in Resources */,
-				EF7F41942CC7D90F00596E39 /* Assets.xcassets in Resources */,
+				EF26B9FB2CCA783D007C3CD8 /* AvenirLTStd-Black.otf in Resources */,
+				EF26B9FC2CCA783D007C3CD8 /* AvenirLTStd-Book.otf in Resources */,
+				EF26B9FD2CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf in Resources */,
+				EF26B9FE2CCA783D007C3CD8 /* AvenirLTStd-Medium.otf in Resources */,
+				EF26B9FF2CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf in Resources */,
+				EF26BA002CCA783D007C3CD8 /* AvenirLTStd-Light.otf in Resources */,
+				EF26BA012CCA783D007C3CD8 /* AvenirLTStd-Roman.otf in Resources */,
+				EF26BA022CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf in Resources */,
+				EF26BA032CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf in Resources */,
+				EF26BA042CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf in Resources */,
+				EF26BA052CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf in Resources */,
+				EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */,
+				EF08E6C32CC91D6D00905CCB /* Preview Assets.xcassets in Resources */,
+				EF08E6C42CC91D6D00905CCB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +400,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7F41952CC7D90F00596E39 /* ContentView.swift in Sources */,
-				EF7F41962CC7D90F00596E39 /* KanshoApp.swift in Sources */,
+				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
+				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
+				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
+				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7F41992CC7D91200596E39 /* KanshoTests.swift in Sources */,
+				EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,8 +419,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7F419D2CC7D91400596E39 /* KanshoUITests.swift in Sources */,
-				EF7F419E2CC7D91400596E39 /* KanshoUITestsLaunchTests.swift in Sources */,
+				EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */,
+				EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,15 +570,12 @@
 				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Kansho;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_FILE = Kansho/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,15 +600,12 @@
 				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Kansho;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_FILE = Kansho/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

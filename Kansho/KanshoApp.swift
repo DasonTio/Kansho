@@ -12,6 +12,6 @@ struct KanshoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }   
     }
 }
