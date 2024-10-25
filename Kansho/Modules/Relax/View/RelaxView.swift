@@ -5,35 +5,23 @@
 //  Created by Dason Tiovino on 24/10/24.
 //
 import SwiftUI
+import CoreHaptics
 
 struct RelaxView: View {
+    @State var hapticManager: HapticManager = .init()
+    
     @State var defaultTimer: Timer?
+    @State var defaultHapticTimer: Timer?
     var defaultMaxTimer: Int = 60;
     
     @State var isActive:Bool = false;
     @State var timer: Int = 60;
     @State var plantImage: String = "plant_0"
     
-    
     var timerDisplay: String{
         let minutes = timer / 60
         let remainingSeconds = timer % 60
         return String(format: "%02d:%02d", minutes, remainingSeconds)
-    }
-    
-    func updatePlantImage(){
-        let step = defaultMaxTimer / 5
-        if(timer > step * 4){
-            plantImage = "plant_0"
-        }else if(timer > step * 3){
-            plantImage = "plant_1"
-        }else if(timer > step * 2){
-            plantImage = "plant_2"
-        }else if(timer > step){
-            plantImage = "plant_3"
-        }else {
-            plantImage = "plant_4"
-        }
     }
     
     var body: some View {
@@ -73,6 +61,7 @@ struct RelaxView: View {
                                 
                                 
                                 Image(plantImage)
+                                    .alignmentGuide(.bottom) { _ in 0 }
                                     .position(CGPoint(
                                         x: width*50,
                                         y: height*45
@@ -89,12 +78,20 @@ struct RelaxView: View {
                                 
                                 let buttonWidth = width * 70
                                 Button{
-                                    self.timerStart()
+                                    if(!isActive){
+                                        self.timerStart()
+                                    }else{
+                                        self.timerStop()
+                                    }
+                                    
                                 }label:{
                                     
                                     Circle()
                                         .fill(.appSecondary)
-                                        .frame(width: buttonWidth, height: buttonWidth)
+                                        .frame(
+                                            width: buttonWidth,
+                                            height: buttonWidth
+                                        )
                                         .overlay{
                                             if (!isActive){
                                                 VStack{
@@ -144,12 +141,32 @@ struct RelaxView: View {
                 )
             }
         }.padding()
+        .onAppear{
+            self.hapticManager.prepareHapticEngine()
+        }
+    }
+    
+    func updatePlantImage(){
+        let step = defaultMaxTimer / 5
+        if(timer > step * 4){
+            plantImage = "plant_0"
+        }else if(timer > step * 3){
+            plantImage = "plant_1"
+        }else if(timer > step * 2){
+            plantImage = "plant_2"
+        }else if(timer > step){
+            plantImage = "plant_3"
+        }else {
+            plantImage = "plant_4"
+        }
     }
     
     func timerStart(){
         isActive = true
+        defaultHapticTimer = Timer.scheduledTimer(withTimeInterval: 1.8, repeats: true){_ in 
+            hapticManager.generateHapticPattern()
+        }
         defaultTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){_ in
-            print("TIMER")
             updatePlantImage()
             timer -= 1
         }
@@ -157,6 +174,7 @@ struct RelaxView: View {
     
     func timerStop(){
         isActive = false
+        timer = 60
         defaultTimer?.invalidate()
     }
 }
