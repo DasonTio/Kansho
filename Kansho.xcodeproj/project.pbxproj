@@ -14,6 +14,7 @@
 		EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C72CC91D7000905CCB /* KanshoTests.swift */; };
 		EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */; };
 		EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */; };
+		EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26577A2CCC142200D7A69E /* HapticManager.swift */; };
 		EF26B9FB2CCA783D007C3CD8 /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */; };
 		EF26B9FC2CCA783D007C3CD8 /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */; };
 		EF26B9FD2CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F12CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf */; };
@@ -55,6 +56,7 @@
 		EF08E6C72CC91D7000905CCB /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
 		EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
 		EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF26577A2CCC142200D7A69E /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
 		EF26B9EF2CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-BlackOblique.otf"; sourceTree = "<group>"; };
 		EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		EF08E6B92CC91D6D00905CCB /* Infrastructures */ = {
 			isa = PBXGroup;
 			children = (
+				EF2657792CCC141C00D7A69E /* Manager */,
 			);
 			path = Infrastructures;
 			sourceTree = "<group>";
@@ -178,6 +181,14 @@
 				EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */,
 			);
 			path = KanshoUITests;
+			sourceTree = "<group>";
+		};
+		EF2657792CCC141C00D7A69E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EF26577A2CCC142200D7A69E /* HapticManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		EF26B9EC2CCA77D0007C3CD8 /* Fonts */ = {
@@ -401,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
+				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
@@ -576,6 +588,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,6 +619,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
