@@ -16,7 +16,7 @@ struct ContentView: View {
             }
         }
         .ignoresSafeArea()
-        .foregroundStyle(Color.secondary)
+        .foregroundStyle(Color.appSecondary)
         
     }
 }
