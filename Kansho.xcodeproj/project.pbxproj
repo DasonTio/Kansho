@@ -15,6 +15,8 @@
 		EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */; };
 		EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */; };
 		EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26577A2CCC142200D7A69E /* HapticManager.swift */; };
+		EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */; };
+		EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */; };
 		EF26B9FB2CCA783D007C3CD8 /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */; };
 		EF26B9FC2CCA783D007C3CD8 /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */; };
 		EF26B9FD2CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F12CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf */; };
@@ -57,6 +59,8 @@
 		EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
 		EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF26577A2CCC142200D7A69E /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewMainLayout.swift; sourceTree = "<group>"; };
+		EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewFooterLayout.swift; sourceTree = "<group>"; };
 		EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
 		EF26B9EF2CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-BlackOblique.otf"; sourceTree = "<group>"; };
 		EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
@@ -191,6 +195,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		EF26A74B2CCCEB7E00B7114C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */,
+				EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		EF26B9EC2CCA77D0007C3CD8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +250,7 @@
 		EF26BA0C2CCA86D6007C3CD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF26A74B2CCCEB7E00B7114C /* Layout */,
 				EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */,
 			);
 			path = View;
@@ -412,7 +426,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
+				EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */,
 				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
+				EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */,
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
@@ -586,8 +602,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -617,8 +633,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

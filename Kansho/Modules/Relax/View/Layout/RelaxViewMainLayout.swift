@@ -69,10 +69,12 @@ struct RelaxViewMainLayout: View{
             }
             Spacer()
             Image("circle_logo_image")
-            
         }
+        .opacity(isActive ? 0.4 : 1)
+        .animation(.easeInOut, value: isActive)
         .padding(.horizontal, 25)
         .padding(.top, 47)
+        
     }
     
     private var plantImageView: some View {
@@ -82,7 +84,8 @@ struct RelaxViewMainLayout: View{
             
             Image(plantImage)
                 .alignmentGuide(.bottom) {_ in 0}
-                .position(x: width * 50, y: height * 45)
+                .position(x: width * 50, y: height * 50)
+                .animation(.easeInOut, value: plantImage)
         }
     }
     
@@ -97,7 +100,7 @@ struct RelaxViewMainLayout: View{
                 .frame(width: radius, height: radius)
                 .position(CGPoint(
                     x: width * 50,
-                    y: height * 95)
+                    y: height * 100)
                 )
         }
     }
@@ -108,15 +111,9 @@ struct RelaxViewMainLayout: View{
             let height = geometry.size.height  / 100
             
             let radius = width * 70
-            Button{
-                toggleTimer()
-            }label:{
+            Button(action: toggleTimer){
                 Circle()
                     .fill(.appSecondary)
-                    .frame(
-                        width: radius,
-                        height: radius
-                    )
                     .overlay{
                         if (!isActive){
                             VStack{
@@ -132,11 +129,10 @@ struct RelaxViewMainLayout: View{
                                 .offset(x: 0, y: -30)
                         }
                     }
-                    .position(CGPoint(
-                        x: width * 50,
-                        y: height * 95)
-                    )
             }
+            .contentShape(Circle())
+            .frame(width: radius, height: radius)
+            .position(x: width * 50, y: height * 95)
         }
     }
     
@@ -151,6 +147,7 @@ struct RelaxViewMainLayout: View{
         if isActive {
             isActive = false
             timer = defaultMaxTimer
+            hapticManager.stopHapticPattern()
         } else {
             isActive = true
             hapticManager.generateHapticPattern()
@@ -160,6 +157,7 @@ struct RelaxViewMainLayout: View{
     private func resetTimer() {
         isActive = false
         timer = defaultMaxTimer
+        updatePlantImage()
     }
     
     private func updatePlantImage() {
