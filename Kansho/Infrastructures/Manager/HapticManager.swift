@@ -8,14 +8,15 @@
 import CoreHaptics
 import SwiftUI
 
-struct HapticManager {
+class HapticManager:ObservableObject {
     private var engine: CHHapticEngine?
+    private var player: CHHapticAdvancedPatternPlayer?
     
     init() {
         prepareHapticEngine()
     }
     
-    mutating func prepareHapticEngine() {
+    func prepareHapticEngine() {
         do {
             engine = try CHHapticEngine()
             try engine?.start()
@@ -24,22 +25,26 @@ struct HapticManager {
         }
     }
     
+    func stopHapticPattern(){
+        try? player?.stop(atTime: CHHapticTimeImmediate)
+    }
+    
     func generateHapticPattern() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
         
         do {
-            // Create a continuous haptic event for the duration of 1.8 seconds
+            // Define the haptic event
             let event = CHHapticEvent(
                 eventType: .hapticContinuous,
                 parameters: [
-                    CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.6), // Starting intensity
-                    CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.5) // Sharpness
+                    CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.6),
+                    CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.5)
                 ],
                 relativeTime: 0,
                 duration: 1.8
             )
             
-            // Create an intensity control curve that rises and falls over 1.8 seconds
+            // Define the intensity curve
             let intensityCurve = CHHapticParameterCurve(
                 parameterID: .hapticIntensityControl,
                 controlPoints: [
@@ -50,13 +55,19 @@ struct HapticManager {
                 relativeTime: 0
             )
             
+            // Create the haptic pattern
             let pattern = try CHHapticPattern(events: [event], parameterCurves: [intensityCurve])
-            
-            // Create a player and start the pattern
-            let player = try engine?.makePlayer(with: pattern)
-            try player?.start(atTime: CHHapticTimeImmediate)
+            doc://com.apple.documentation/186btzw
+            if let engine = engine {
+                let advancedPlayer = try engine.makeAdvancedPlayer(with: pattern)
+                advancedPlayer.loopEnabled = true
+                
+                self.player = advancedPlayer
+                try advancedPlayer.start(atTime: CHHapticTimeImmediate)
+            }
         } catch {
             print("Error creating haptic pattern: \(error)")
         }
     }
+
 }
