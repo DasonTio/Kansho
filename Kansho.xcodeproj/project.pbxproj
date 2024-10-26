@@ -31,6 +31,8 @@
 		EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */; };
 		EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */; };
 		EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */; };
+		EFE528202CCD712C00650C8D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5281F2CCD712B00650C8D /* JournalView.swift */; };
+		EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE528222CCD722100650C8D /* RelaxViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		EF7F531E2CC16BF100286047 /* Kansho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kansho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F532E2CC16BF300286047 /* KanshoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F53382CC16BF300286047 /* KanshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE5281F2CCD712B00650C8D /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		EFE528222CCD722100650C8D /* RelaxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 		EF08E6BA2CC91D6D00905CCB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EFE5281D2CCD711F00650C8D /* Journal */,
 				EF26BA0B2CCA86D0007C3CD8 /* Relax */,
 			);
 			path = Modules;
@@ -242,6 +247,7 @@
 		EF26BA0B2CCA86D0007C3CD8 /* Relax */ = {
 			isa = PBXGroup;
 			children = (
+				EFE528212CCD721D00650C8D /* ViewModel */,
 				EF26BA0C2CCA86D6007C3CD8 /* View */,
 			);
 			path = Relax;
@@ -274,6 +280,30 @@
 				EF7F53382CC16BF300286047 /* KanshoUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EFE5281D2CCD711F00650C8D /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				EFE5281E2CCD712700650C8D /* View */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		EFE5281E2CCD712700650C8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFE5281F2CCD712B00650C8D /* JournalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFE528212CCD721D00650C8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFE528222CCD722100650C8D /* RelaxViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,11 +457,13 @@
 			files = (
 				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
 				EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */,
+				EFE528202CCD712C00650C8D /* JournalView.swift in Sources */,
 				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
 				EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */,
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
+				EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

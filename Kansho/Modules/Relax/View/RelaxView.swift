@@ -8,25 +8,26 @@ import SwiftUI
 import CoreHaptics
 
 struct RelaxView: View {
-    @EnvironmentObject var hapticManager: HapticManager
+    @EnvironmentObject var relaxViewModel: RelaxViewModel
     
     var body: some View {
         ZStack{
             VStack{
                 RelaxViewMainLayout()
-                    .environmentObject(hapticManager)
+                    .environmentObject(relaxViewModel)
                 
                 RelaxViewFooterLayout()
+                
                 
             }
         }.padding()
         .onAppear{
-            self.hapticManager.prepareHapticEngine()
+            self.relaxViewModel.hapticManager.prepareHapticEngine()
         }
     }
 }
 
 #Preview {
     RelaxView()
-        .environmentObject(HapticManager())
+        .environmentObject(RelaxViewModel(hapticManager: HapticManager()))
 }

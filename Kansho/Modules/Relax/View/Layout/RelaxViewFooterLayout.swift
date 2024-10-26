@@ -7,14 +7,15 @@
 import SwiftUI
 
 struct RelaxViewFooterLayout: View{
+    @EnvironmentObject var relaxViewModel: RelaxViewModel
     var body: some View{
         Button{
-            
+            relaxViewModel.isJournaling.toggle()
         } label: {
             RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                 .fill(.appPrimary)
                 .overlay{
-                    
+                    Image("journal_image")
                 }
         }
         .frame(
