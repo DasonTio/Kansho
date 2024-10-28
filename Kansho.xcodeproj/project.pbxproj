@@ -14,6 +14,9 @@
 		EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C72CC91D7000905CCB /* KanshoTests.swift */; };
 		EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */; };
 		EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */; };
+		EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */; };
+		EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */; };
+		EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */; };
 		EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26577A2CCC142200D7A69E /* HapticManager.swift */; };
 		EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */; };
 		EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */; };
@@ -31,6 +34,8 @@
 		EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */; };
 		EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */; };
 		EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */; };
+		EFE528202CCD712C00650C8D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5281F2CCD712B00650C8D /* JournalView.swift */; };
+		EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE528222CCD722100650C8D /* RelaxViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,9 @@
 		EF08E6C72CC91D7000905CCB /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
 		EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
 		EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalInputComponent.swift; sourceTree = "<group>"; };
+		EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
+		EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModel.swift; sourceTree = "<group>"; };
 		EF26577A2CCC142200D7A69E /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewMainLayout.swift; sourceTree = "<group>"; };
 		EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewFooterLayout.swift; sourceTree = "<group>"; };
@@ -79,6 +87,8 @@
 		EF7F531E2CC16BF100286047 /* Kansho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kansho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F532E2CC16BF300286047 /* KanshoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F53382CC16BF300286047 /* KanshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE5281F2CCD712B00650C8D /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		EFE528222CCD722100650C8D /* RelaxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 		EF08E6B92CC91D6D00905CCB /* Infrastructures */ = {
 			isa = PBXGroup;
 			children = (
+				EF1667C92CCFF4AF00F22DAA /* Model */,
 				EF2657792CCC141C00D7A69E /* Manager */,
 			);
 			path = Infrastructures;
@@ -124,6 +135,7 @@
 		EF08E6BA2CC91D6D00905CCB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EFE5281D2CCD711F00650C8D /* Journal */,
 				EF26BA0B2CCA86D0007C3CD8 /* Relax */,
 			);
 			path = Modules;
@@ -187,6 +199,30 @@
 			path = KanshoUITests;
 			sourceTree = "<group>";
 		};
+		EF1667C32CCFF36800F22DAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EF1667C62CCFF47800F22DAA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF1667C92CCFF4AF00F22DAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EF2657792CCC141C00D7A69E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +278,7 @@
 		EF26BA0B2CCA86D0007C3CD8 /* Relax */ = {
 			isa = PBXGroup;
 			children = (
+				EFE528212CCD721D00650C8D /* ViewModel */,
 				EF26BA0C2CCA86D6007C3CD8 /* View */,
 			);
 			path = Relax;
@@ -274,6 +311,32 @@
 				EF7F53382CC16BF300286047 /* KanshoUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EFE5281D2CCD711F00650C8D /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667C62CCFF47800F22DAA /* ViewModel */,
+				EFE5281E2CCD712700650C8D /* View */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		EFE5281E2CCD712700650C8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667C32CCFF36800F22DAA /* Components */,
+				EFE5281F2CCD712B00650C8D /* JournalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFE528212CCD721D00650C8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFE528222CCD722100650C8D /* RelaxViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,13 +488,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */,
 				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
 				EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */,
+				EFE528202CCD712C00650C8D /* JournalView.swift in Sources */,
 				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
 				EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */,
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
+				EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */,
+				EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */,
+				EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
