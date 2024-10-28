@@ -10,6 +10,7 @@ import Combine
 
 struct JournalView: View {
     @EnvironmentObject var relaxViewModel: RelaxViewModel
+    @EnvironmentObject var journalViewModel: JournalViewModel
     @State private var showTimerNotification: Bool = false
     @State private var cancellables: [AnyCancellable] = []
     
@@ -19,6 +20,7 @@ struct JournalView: View {
             let componentActive = showTimerNotification && relaxViewModel.isActive
             
             VStack (alignment: .leading, spacing: 0){
+                // MARK: Journaling
                 Button(action: {
                     relaxViewModel.isJournaling.toggle()
                 }){
@@ -57,30 +59,61 @@ struct JournalView: View {
                         )
                         .padding(.horizontal, 15)
                         .padding(.top, 47)
-                
+                    
                 }
                 
-                
-                RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
-                    .fill(.appPrimary)
-                    .overlay {
-                        ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
-                            Text("Test")
+                // MARK: Add Journal Button
+                Button(action: {
+                    // TODO: Call Add Journal
+                }){
+                    RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
+                        .fill(.white)
+                        .strokeBorder(style: StrokeStyle(
+                            lineWidth: 2,
+                            dash: [5])
+                        )
+                        .foregroundStyle(.appSecondary.opacity(0.4))
+                        .overlay {
+                            Image(systemName: "plus")
+                                .font(.themeTitle3())
+                                .foregroundStyle(.appSecondary)
                         }
-                        .clipped()
-                        .cornerRadius(30)
+                        .frame(height: 100)
+                        .padding(.horizontal, 15)
+                        .padding(.top, 10)
+                }
+                
+                // MARK: List All Journal
+                ForEach(journalViewModel.data){ journal in
+                    Button(action: {
+                        
+                    }){
+                        RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
+                            .fill(.appPrimary)
+                            .overlay {
+                                VStack(alignment: .leading){
+                                    Text(journal.title)
+                                        .font(.themeTitle3(weight: .heavy))
+                                    Text(journal.description)
+                                        .font(.themeBody())
+                                }
+                                .frame(
+                                    maxWidth: .infinity,
+                                    alignment: Alignment(
+                                        horizontal: .leading,
+                                        vertical: .center
+                                    )
+                                ).padding(.horizontal, 25)
+                            }
+                            .frame(height: 100)
+                            .padding(.horizontal, 15)
+                            .padding(.top, 10)
                     }
-                    .frame(
-                        maxHeight: .infinity
-                    )
-                    .animation(
-                        .timingCurve(.circularEaseInOut, duration: 0.5),
-                        value: componentActive
-                    )
-                    .padding(.horizontal, 15)
-                    .padding(.top, 10)
+                }
             }
-        }.onAppear {
+        }
+        .foregroundStyle(.appSecondary)
+        .onAppear {
             relaxViewModel.$isJournaling.sink(receiveValue: {value in
                 Timer.scheduledTimer(withTimeInterval: 1, repeats: false){_ in
                     showTimerNotification = value
@@ -94,4 +127,5 @@ struct JournalView: View {
 #Preview{
     JournalView()
         .environmentObject(RelaxViewModel(hapticManager: .init()))
+        .environmentObject(JournalViewModel())
 }

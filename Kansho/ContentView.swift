@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var journalViewModel: JournalViewModel = .init()
     @StateObject var relaxViewModel: RelaxViewModel = .init(
         hapticManager: .init()
     )
@@ -29,6 +30,7 @@ struct ContentView: View {
                     
                     JournalView()
                         .environmentObject(relaxViewModel)
+                        .environmentObject(journalViewModel)
                         .offset(
                             x: 0,
                             y: relaxViewModel.isJournaling ? 0: height * 100
@@ -43,7 +45,6 @@ struct ContentView: View {
         }
         .ignoresSafeArea()
         .foregroundStyle(Color.appSecondary)
-        
     }
 }
 
