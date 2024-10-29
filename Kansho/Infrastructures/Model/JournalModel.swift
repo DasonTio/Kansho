@@ -10,5 +10,5 @@ import Foundation
 struct JournalModel: Identifiable, Codable {
     var id: UUID = .init()
     var title: String
-    var description: String
+    var content: String
 }
