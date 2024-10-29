@@ -12,3 +12,9 @@ struct JournalModel: Identifiable, Codable {
     var title: String
     var content: String
 }
+
+extension JournalModel{
+    func toJournalDTO()->JournalModelDTO{
+        .init(id: id, title: title, content: content)
+    }
+}
