@@ -20,3 +20,9 @@ struct JournalModelLocal: Identifiable {
         self.content = content
     }
 }
+
+extension JournalModelLocal{
+    func toJournal() -> JournalModel {
+        .init(id: id, title: title, content: content)
+    }
+}
