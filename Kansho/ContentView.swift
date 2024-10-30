@@ -8,14 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var journalViewModel: JournalViewModel = .init()
+    @StateObject var relaxViewModel: RelaxViewModel = .init(
+        hapticManager: .init()
+    )
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        GeometryReader{ geometry in
+            let height = geometry.size.height / 100
+           
+            Color.background
+            NavigationStack{
+                ZStack{
+                    RelaxView()
+                        .environmentObject(relaxViewModel)
+                        .offset(
+                            x: 0,
+                            y: relaxViewModel.isJournaling ? height * -100 : 0
+                        )
+                        .animation(.easeInOut, value: relaxViewModel.isJournaling)
+                    
+                    JournalView()
+                        .environmentObject(relaxViewModel)
+                        .environmentObject(journalViewModel)
+                        .offset(
+                            x: 0,
+                            y: relaxViewModel.isJournaling ? 0: height * 100
+                        )
+                        .animation(
+                            .easeInOut,       
+                            value: relaxViewModel.isJournaling
+                        )
+                }
+
+            }
         }
-        .padding()
+        .ignoresSafeArea()
+        .foregroundStyle(Color.appSecondary)
     }
 }
 

@@ -6,6 +6,40 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EF08E6C32CC91D6D00905CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */; };
+		EF08E6C42CC91D6D00905CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */; };
+		EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C02CC91D6D00905CCB /* ContentView.swift */; };
+		EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C12CC91D6D00905CCB /* KanshoApp.swift */; };
+		EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C72CC91D7000905CCB /* KanshoTests.swift */; };
+		EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */; };
+		EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */; };
+		EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */; };
+		EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */; };
+		EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */; };
+		EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26577A2CCC142200D7A69E /* HapticManager.swift */; };
+		EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */; };
+		EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */; };
+		EF26B9FB2CCA783D007C3CD8 /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */; };
+		EF26B9FC2CCA783D007C3CD8 /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */; };
+		EF26B9FD2CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F12CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf */; };
+		EF26B9FE2CCA783D007C3CD8 /* AvenirLTStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F62CCA783D007C3CD8 /* AvenirLTStd-Medium.otf */; };
+		EF26B9FF2CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F32CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf */; };
+		EF26BA002CCA783D007C3CD8 /* AvenirLTStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F42CCA783D007C3CD8 /* AvenirLTStd-Light.otf */; };
+		EF26BA012CCA783D007C3CD8 /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F92CCA783D007C3CD8 /* AvenirLTStd-Roman.otf */; };
+		EF26BA022CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F52CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf */; };
+		EF26BA032CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F82CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf */; };
+		EF26BA042CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9EF2CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf */; };
+		EF26BA052CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F22CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf */; };
+		EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */; };
+		EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */; };
+		EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */; };
+		EFE528202CCD712C00650C8D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5281F2CCD712B00650C8D /* JournalView.swift */; };
+		EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE528222CCD722100650C8D /* RelaxViewModel.swift */; };
+		EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF1153F2CD143220038D212 /* JournalModelLocal.swift */; };
+		EFF115432CD144CD0038D212 /* JournalModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF115422CD144C90038D212 /* JournalModelDTO.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EF7F532F2CC16BF300286047 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,28 +58,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF08E6C02CC91D6D00905CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF08E6C12CC91D6D00905CCB /* KanshoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoApp.swift; sourceTree = "<group>"; };
+		EF08E6C72CC91D7000905CCB /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
+		EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
+		EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalInputComponent.swift; sourceTree = "<group>"; };
+		EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
+		EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModel.swift; sourceTree = "<group>"; };
+		EF26577A2CCC142200D7A69E /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewMainLayout.swift; sourceTree = "<group>"; };
+		EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewFooterLayout.swift; sourceTree = "<group>"; };
+		EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
+		EF26B9EF2CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-BlackOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
+		EF26B9F12CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-BookOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F22CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Heavy.otf"; sourceTree = "<group>"; };
+		EF26B9F32CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-HeavyOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F42CCA783D007C3CD8 /* AvenirLTStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Light.otf"; sourceTree = "<group>"; };
+		EF26B9F52CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-LightOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F62CCA783D007C3CD8 /* AvenirLTStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Medium.otf"; sourceTree = "<group>"; };
+		EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-MediumOblique.otf"; sourceTree = "<group>"; };
+		EF26B9F82CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Oblique.otf"; sourceTree = "<group>"; };
+		EF26B9F92CCA783D007C3CD8 /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
+		EF26BA072CCA7872007C3CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Avenir.swift"; sourceTree = "<group>"; };
+		EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
 		EF7F531E2CC16BF100286047 /* Kansho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kansho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F532E2CC16BF300286047 /* KanshoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F53382CC16BF300286047 /* KanshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE5281F2CCD712B00650C8D /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		EFE528222CCD722100650C8D /* RelaxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewModel.swift; sourceTree = "<group>"; };
+		EFF1153F2CD143220038D212 /* JournalModelLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModelLocal.swift; sourceTree = "<group>"; };
+		EFF115422CD144C90038D212 /* JournalModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModelDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EF7F53202CC16BF100286047 /* Kansho */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Kansho;
-			sourceTree = "<group>";
-		};
-		EF7F53312CC16BF300286047 /* KanshoTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KanshoTests;
-			sourceTree = "<group>";
-		};
-		EF7F533B2CC16BF300286047 /* KanshoUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KanshoUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EF7F531B2CC16BF100286047 /* Frameworks */ = {
@@ -72,12 +120,190 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF08E6B82CC91D6D00905CCB /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		EF08E6B92CC91D6D00905CCB /* Infrastructures */ = {
+			isa = PBXGroup;
+			children = (
+				EFF1153E2CD1431B0038D212 /* Database */,
+				EF1667C92CCFF4AF00F22DAA /* Model */,
+				EF2657792CCC141C00D7A69E /* Manager */,
+			);
+			path = Infrastructures;
+			sourceTree = "<group>";
+		};
+		EF08E6BA2CC91D6D00905CCB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EFE5281D2CCD711F00650C8D /* Journal */,
+				EF26BA0B2CCA86D0007C3CD8 /* Relax */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EF08E6BC2CC91D6D00905CCB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF08E6BE2CC91D6D00905CCB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF08E6BC2CC91D6D00905CCB /* Preview Content */,
+				EF26B9EC2CCA77D0007C3CD8 /* Fonts */,
+				EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF08E6BF2CC91D6D00905CCB /* ReusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		EF08E6C22CC91D6D00905CCB /* Kansho */ = {
+			isa = PBXGroup;
+			children = (
+				EF26BA072CCA7872007C3CD8 /* Info.plist */,
+				EF08E6C12CC91D6D00905CCB /* KanshoApp.swift */,
+				EF08E6C02CC91D6D00905CCB /* ContentView.swift */,
+				EF08E6B82CC91D6D00905CCB /* Constant */,
+				EF26BA082CCA7BA1007C3CD8 /* Extensions */,
+				EF08E6B92CC91D6D00905CCB /* Infrastructures */,
+				EF08E6BA2CC91D6D00905CCB /* Modules */,
+				EF08E6BE2CC91D6D00905CCB /* Resources */,
+				EF08E6BF2CC91D6D00905CCB /* ReusableComponents */,
+			);
+			path = Kansho;
+			sourceTree = "<group>";
+		};
+		EF08E6C82CC91D7000905CCB /* KanshoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF08E6C72CC91D7000905CCB /* KanshoTests.swift */,
+			);
+			path = KanshoTests;
+			sourceTree = "<group>";
+		};
+		EF08E6CC2CC91D7200905CCB /* KanshoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */,
+				EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */,
+			);
+			path = KanshoUITests;
+			sourceTree = "<group>";
+		};
+		EF1667C32CCFF36800F22DAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EF1667C62CCFF47800F22DAA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF1667C92CCFF4AF00F22DAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF2657792CCC141C00D7A69E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EF26577A2CCC142200D7A69E /* HapticManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EF26A74B2CCCEB7E00B7114C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */,
+				EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EF26B9EC2CCA77D0007C3CD8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF26B9FA2CCA783D007C3CD8 /* Avenir */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EF26B9FA2CCA783D007C3CD8 /* Avenir */ = {
+			isa = PBXGroup;
+			children = (
+				EF26B9EE2CCA783D007C3CD8 /* AvenirLTStd-Black.otf */,
+				EF26B9EF2CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf */,
+				EF26B9F02CCA783D007C3CD8 /* AvenirLTStd-Book.otf */,
+				EF26B9F12CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf */,
+				EF26B9F22CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf */,
+				EF26B9F32CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf */,
+				EF26B9F42CCA783D007C3CD8 /* AvenirLTStd-Light.otf */,
+				EF26B9F52CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf */,
+				EF26B9F62CCA783D007C3CD8 /* AvenirLTStd-Medium.otf */,
+				EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */,
+				EF26B9F82CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf */,
+				EF26B9F92CCA783D007C3CD8 /* AvenirLTStd-Roman.otf */,
+			);
+			path = Avenir;
+			sourceTree = "<group>";
+		};
+		EF26BA082CCA7BA1007C3CD8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF26BA0B2CCA86D0007C3CD8 /* Relax */ = {
+			isa = PBXGroup;
+			children = (
+				EFE528212CCD721D00650C8D /* ViewModel */,
+				EF26BA0C2CCA86D6007C3CD8 /* View */,
+			);
+			path = Relax;
+			sourceTree = "<group>";
+		};
+		EF26BA0C2CCA86D6007C3CD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF26A74B2CCCEB7E00B7114C /* Layout */,
+				EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EF7F53152CC16BF100286047 = {
 			isa = PBXGroup;
 			children = (
-				EF7F53202CC16BF100286047 /* Kansho */,
-				EF7F53312CC16BF300286047 /* KanshoTests */,
-				EF7F533B2CC16BF300286047 /* KanshoUITests */,
+				EF08E6C22CC91D6D00905CCB /* Kansho */,
+				EF08E6C82CC91D7000905CCB /* KanshoTests */,
+				EF08E6CC2CC91D7200905CCB /* KanshoUITests */,
 				EF7F531F2CC16BF100286047 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +316,57 @@
 				EF7F53382CC16BF300286047 /* KanshoUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EFE5281D2CCD711F00650C8D /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667C62CCFF47800F22DAA /* ViewModel */,
+				EFE5281E2CCD712700650C8D /* View */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		EFE5281E2CCD712700650C8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF1667C32CCFF36800F22DAA /* Components */,
+				EFE5281F2CCD712B00650C8D /* JournalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFE528212CCD721D00650C8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFE528222CCD722100650C8D /* RelaxViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EFF1153D2CD1430D0038D212 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				EFF1153F2CD143220038D212 /* JournalModelLocal.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		EFF1153E2CD1431B0038D212 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				EFF115412CD144C30038D212 /* DTO */,
+				EFF1153D2CD1430D0038D212 /* Local */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		EFF115412CD144C30038D212 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				EFF115422CD144C90038D212 /* JournalModelDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +383,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				EF7F53202CC16BF100286047 /* Kansho */,
 			);
 			name = Kansho;
 			packageProductDependencies = (
@@ -130,9 +404,6 @@
 			dependencies = (
 				EF7F53302CC16BF300286047 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				EF7F53312CC16BF300286047 /* KanshoTests */,
-			);
 			name = KanshoTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +423,6 @@
 			);
 			dependencies = (
 				EF7F533A2CC16BF300286047 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				EF7F533B2CC16BF300286047 /* KanshoUITests */,
 			);
 			name = KanshoUITests;
 			packageProductDependencies = (
@@ -212,6 +480,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF26B9FB2CCA783D007C3CD8 /* AvenirLTStd-Black.otf in Resources */,
+				EF26B9FC2CCA783D007C3CD8 /* AvenirLTStd-Book.otf in Resources */,
+				EF26B9FD2CCA783D007C3CD8 /* AvenirLTStd-BookOblique.otf in Resources */,
+				EF26B9FE2CCA783D007C3CD8 /* AvenirLTStd-Medium.otf in Resources */,
+				EF26B9FF2CCA783D007C3CD8 /* AvenirLTStd-HeavyOblique.otf in Resources */,
+				EF26BA002CCA783D007C3CD8 /* AvenirLTStd-Light.otf in Resources */,
+				EF26BA012CCA783D007C3CD8 /* AvenirLTStd-Roman.otf in Resources */,
+				EF26BA022CCA783D007C3CD8 /* AvenirLTStd-LightOblique.otf in Resources */,
+				EF26BA032CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf in Resources */,
+				EF26BA042CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf in Resources */,
+				EF26BA052CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf in Resources */,
+				EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */,
+				EF08E6C32CC91D6D00905CCB /* Preview Assets.xcassets in Resources */,
+				EF08E6C42CC91D6D00905CCB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +518,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */,
+				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
+				EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */,
+				EFE528202CCD712C00650C8D /* JournalView.swift in Sources */,
+				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
+				EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */,
+				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
+				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
+				EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */,
+				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
+				EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */,
+				EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */,
+				EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */,
+				EFF115432CD144CD0038D212 /* JournalModelDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +547,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */,
+				EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,15 +694,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Kansho/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kansho/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kansho/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,15 +725,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Kansho/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kansho/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kansho/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
