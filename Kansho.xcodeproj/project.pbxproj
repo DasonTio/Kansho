@@ -34,10 +34,10 @@
 		EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */; };
 		EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */; };
 		EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */; };
+		EFD37A2A2CD3E11B0012BDBE /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */; };
 		EFE528202CCD712C00650C8D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5281F2CCD712B00650C8D /* JournalView.swift */; };
 		EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE528222CCD722100650C8D /* RelaxViewModel.swift */; };
 		EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF1153F2CD143220038D212 /* JournalModelLocal.swift */; };
-		EFF115432CD144CD0038D212 /* JournalModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF115422CD144C90038D212 /* JournalModelDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,10 +89,10 @@
 		EF7F531E2CC16BF100286047 /* Kansho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kansho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F532E2CC16BF300286047 /* KanshoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F53382CC16BF300286047 /* KanshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		EFE5281F2CCD712B00650C8D /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		EFE528222CCD722100650C8D /* RelaxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewModel.swift; sourceTree = "<group>"; };
 		EFF1153F2CD143220038D212 /* JournalModelLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModelLocal.swift; sourceTree = "<group>"; };
-		EFF115422CD144C90038D212 /* JournalModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModelDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +231,7 @@
 		EF2657792CCC141C00D7A69E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */,
 				EF26577A2CCC142200D7A69E /* HapticManager.swift */,
 			);
 			path = Manager;
@@ -355,18 +356,9 @@
 		EFF1153E2CD1431B0038D212 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				EFF115412CD144C30038D212 /* DTO */,
 				EFF1153D2CD1430D0038D212 /* Local */,
 			);
 			path = Database;
-			sourceTree = "<group>";
-		};
-		EFF115412CD144C30038D212 /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				EFF115422CD144C90038D212 /* JournalModelDTO.swift */,
-			);
-			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,6 +516,7 @@
 				EFE528202CCD712C00650C8D /* JournalView.swift in Sources */,
 				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
 				EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */,
+				EFD37A2A2CD3E11B0012BDBE /* SwiftDataManager.swift in Sources */,
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */,
@@ -531,7 +524,6 @@
 				EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */,
 				EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */,
 				EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */,
-				EFF115432CD144CD0038D212 /* JournalModelDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

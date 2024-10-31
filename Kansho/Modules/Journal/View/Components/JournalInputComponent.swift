@@ -50,7 +50,8 @@ struct JournalInputComponent: View {
                                     Image(systemName: "paperplane")
                                         .resizable()
                                         .scaledToFit()
-                                        .foregroundStyle(.appPrimary)                   .padding(15)
+                                        .foregroundStyle(.appPrimary)
+                                        .padding(15)
                                 }
                             }.frame(
                                 width: 50,

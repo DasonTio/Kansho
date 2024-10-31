@@ -7,26 +7,47 @@
 
 
 import SwiftUI
+import SwiftData
 import Combine
 
 class JournalViewModel: ObservableObject{
     
+    private let container: ModelContainer!
     @Published var data: [JournalModel] = [
-        .init(title: "Title", description: "Description"),
-        .init(title: "Title2", description: "Description2"),
-        .init(title: "Title3", description: "Description3"),
+        .init(title: "Title", content: "Description"),
+        .init(title: "Title2", content: "Description2"),
+        .init(title: "Title3", content: "Description3"),
     ]
     
-    public func addJournal(_ journal: JournalModel) {
-        data.append(journal)
+    init() {
+        container = SwiftDataManager.shared.container
     }
     
-    public func removeJournal(_ journal: JournalModel) {
-        data.removeAll(where: { $0.id == journal.id })
+    @MainActor public func fetch(){
+        let fetchDescriptor = FetchDescriptor<JournalModelLocal>()
+        do{
+            let journal = try container.mainContext.fetch(fetchDescriptor)
+            data = journal.compactMap{$0.toJournal()}
+        }catch{
+            debugPrint(error)
+        }
     }
     
-    public func updateJournal(_ journal: JournalModel) {
-        data.removeAll(where: { $0.id == journal.id })
-        data.append(journal)
+    @MainActor public func addJournal(_ journal: JournalModel) {
+        do{
+            container.mainContext.insert(journal.toJournalLocal())
+            try container.mainContext.save()
+        }catch{
+            debugPrint("Add Journal Error: ", error)
+        }
+    }
+    
+    @MainActor public func removeJournal(_ journal: JournalModel) {
+        do{
+            container.mainContext.delete(journal.toJournalLocal())
+            try container.mainContext.save()
+        }catch{
+            debugPrint("Remove Journal Error: ", error)
+        }
     }
 }

@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct JournalModel: Identifiable, Codable {
+struct JournalModel: Identifiable, Codable, Hashable {
     var id: UUID = .init()
     var title: String
     var content: String
 }
 
 extension JournalModel{
-    func toJournalDTO()->JournalModelDTO{
+    func toJournalLocal() -> JournalModelLocal {
         .init(id: id, title: title, content: content)
     }
 }

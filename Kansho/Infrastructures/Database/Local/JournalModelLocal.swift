@@ -9,7 +9,7 @@ import SwiftData
 import Foundation
 
 @Model
-struct JournalModelLocal: Identifiable {
+class JournalModelLocal: Identifiable {
     var id: UUID
     var title: String
     var content: String
