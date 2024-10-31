@@ -84,7 +84,7 @@ struct JournalView: View {
                 }
                 
                 // MARK: List All Journal
-                ForEach(journalViewModel.data){ journal in
+                ForEach(journalViewModel.data, id: \.self){ journal in
                     Button(action: {
                         
                     }){
@@ -94,7 +94,7 @@ struct JournalView: View {
                                 VStack(alignment: .leading){
                                     Text(journal.title)
                                         .font(.themeTitle3(weight: .heavy))
-                                    Text(journal.description)
+                                    Text(journal.content)
                                         .font(.themeBody())
                                 }
                                 .frame(
