@@ -17,6 +17,7 @@
 		EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */; };
 		EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */; };
 		EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */; };
+		EF230E462CD7BBBA00151BD3 /* JournalNotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */; };
 		EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26577A2CCC142200D7A69E /* HapticManager.swift */; };
 		EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */; };
 		EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */; };
@@ -68,6 +69,7 @@
 		EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalInputComponent.swift; sourceTree = "<group>"; };
 		EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModel.swift; sourceTree = "<group>"; };
+		EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalNotificationButton.swift; sourceTree = "<group>"; };
 		EF26577A2CCC142200D7A69E /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewMainLayout.swift; sourceTree = "<group>"; };
 		EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewFooterLayout.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		EF1667C32CCFF36800F22DAA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */,
 				EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */,
 			);
 			path = Components;
@@ -513,6 +516,7 @@
 				EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */,
 				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
 				EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */,
+				EF230E462CD7BBBA00151BD3 /* JournalNotificationButton.swift in Sources */,
 				EFE528202CCD712C00650C8D /* JournalView.swift in Sources */,
 				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
 				EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */,
