@@ -17,8 +17,7 @@ struct RelaxView: View {
                     .environmentObject(relaxViewModel)
                 
                 RelaxViewFooterLayout()
-                
-                
+                    .padding(.bottom, 100)
             }
         }.padding()
         .onAppear{

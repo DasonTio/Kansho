@@ -13,11 +13,7 @@ import Combine
 class JournalViewModel: ObservableObject{
     
     private let container: ModelContainer!
-    @Published var data: [JournalModel] = [
-        .init(title: "Title", content: "Description"),
-        .init(title: "Title2", content: "Description2"),
-        .init(title: "Title3", content: "Description3"),
-    ]
+    @Published var data: [JournalModel] = []
     
     init() {
         container = SwiftDataManager.shared.container
@@ -37,6 +33,7 @@ class JournalViewModel: ObservableObject{
         do{
             container.mainContext.insert(journal.toJournalLocal())
             try container.mainContext.save()
+            fetch()
         }catch{
             debugPrint("Add Journal Error: ", error)
         }
@@ -46,6 +43,7 @@ class JournalViewModel: ObservableObject{
         do{
             container.mainContext.delete(journal.toJournalLocal())
             try container.mainContext.save()
+            fetch()
         }catch{
             debugPrint("Remove Journal Error: ", error)
         }
