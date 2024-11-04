@@ -14,6 +14,7 @@ struct JournalView: View {
     @State private var showTimerNotification: Bool = false
     @State private var cancellables: [AnyCancellable] = []
     @State private var showSheet: Bool = false
+    @State private var sheetModel: JournalModel = .init(title: "Empty", content: "Empty")
     
     var body: some View {
         VStack (alignment: .leading, spacing: 0){
@@ -27,8 +28,8 @@ struct JournalView: View {
                 // TODO: Call Add Journal
                 journalViewModel.addJournal(JournalModel(
                     title: "Title",
-                    content: "Content")
-                )
+                    content: "Content"
+                ))
             }){
                 RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                     .fill(.white)
@@ -50,7 +51,8 @@ struct JournalView: View {
             // MARK: List All Journal
             ForEach($journalViewModel.data, id: \.self){ $journal in
                 Button(action: {
-                    showSheet.toggle()
+                    showSheet = true
+                    sheetModel = journal
                 }){
                     RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                         .fill(.appPrimary)
@@ -58,8 +60,10 @@ struct JournalView: View {
                             VStack(alignment: .leading){
                                 Text($journal.wrappedValue.title)
                                     .font(.themeTitle3(weight: .heavy))
+                                    .lineLimit(1)
                                 Text($journal.wrappedValue.content)
                                     .font(.themeBody())
+                                    .lineLimit(1)
                             }
                             .frame(
                                 maxWidth: .infinity,
@@ -73,11 +77,9 @@ struct JournalView: View {
                         .padding(.horizontal, 15)
                         .padding(.top, 10)
                 }.sheet(isPresented: $showSheet){
-                    JournalDetailView(
-                        journalTitle: $journal.title,
-                        journalContent: $journal.content
-                    ){
-                        journalViewModel.updateJournal(journal)
+                    JournalDetailView(model: $sheetModel){
+                        showSheet = false
+                        journalViewModel.updateJournal(sheetModel)
                     }
                 }
             }

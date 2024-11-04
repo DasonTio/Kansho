@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct JournalDetailView: View {
-    @Binding var journalTitle: String
-    @Binding var journalContent: String
+    @Binding var model: JournalModel
     
     var function: ()->Void
     
@@ -20,7 +19,7 @@ struct JournalDetailView: View {
             .overlay {
                 ZStack {
                     VStack(alignment: .leading){
-                        TextField(text: $journalTitle, label: {
+                        TextField(text: $model.title, label: {
                             Text("Journal title today...")
                         })
                         .font(.themeTitle3())
@@ -29,7 +28,7 @@ struct JournalDetailView: View {
                             .padding(.bottom, 5)
                         
                         
-                        TextEditor(text: $journalContent)
+                        TextEditor(text: $model.content)
                             .scrollContentBackground(.hidden)
                             .background(Color.clear) // Makes the background clear
                             .font(.themeBody())
