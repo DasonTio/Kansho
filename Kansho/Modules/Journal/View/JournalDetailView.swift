@@ -1,16 +1,16 @@
 //
-//  JournalInputComponent.swift
+//  JournalDetailView.swift
 //  Kansho
 //
-//  Created by Dason Tiovino on 28/10/24.
+//  Created by Dason Tiovino on 04/11/24.
 //
+
 
 import SwiftUI
 
-struct JournalInputComponent: View {
-    
-    @State private var journalTitle: String = ""
-    @State private var journalDescription: String = ""
+struct JournalDetailView: View {
+    @Binding var journalTitle: String
+    @Binding var journalContent: String
     
     var body: some View {
         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
@@ -26,7 +26,7 @@ struct JournalInputComponent: View {
                         Divider()
                             .padding(.bottom, 5)
                         
-                        TextField(text: $journalDescription, label: {
+                        TextField(text: $journalContent, label: {
                             Text("Write your thoughts here...")
                         })
                         .font(.themeBody())

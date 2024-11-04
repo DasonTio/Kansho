@@ -13,6 +13,7 @@ struct JournalView: View {
     @EnvironmentObject var journalViewModel: JournalViewModel
     @State private var showTimerNotification: Bool = false
     @State private var cancellables: [AnyCancellable] = []
+    @State private var showSheet: Bool = false
     
     var body: some View {
         VStack (alignment: .leading, spacing: 0){
@@ -47,17 +48,17 @@ struct JournalView: View {
             }
             
             // MARK: List All Journal
-            ForEach(journalViewModel.data, id: \.self){ journal in
+            ForEach($journalViewModel.data, id: \.self){ $journal in
                 Button(action: {
-                    
+                    showSheet.toggle()
                 }){
                     RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                         .fill(.appPrimary)
                         .overlay {
                             VStack(alignment: .leading){
-                                Text(journal.title)
+                                Text($journal.wrappedValue.title)
                                     .font(.themeTitle3(weight: .heavy))
-                                Text(journal.content)
+                                Text($journal.wrappedValue.content)
                                     .font(.themeBody())
                             }
                             .frame(
@@ -71,6 +72,11 @@ struct JournalView: View {
                         .frame(height: 100)
                         .padding(.horizontal, 15)
                         .padding(.top, 10)
+                }.sheet(isPresented: $showSheet){
+                    JournalDetailView(
+                        journalTitle: $journal.title,
+                        journalContent: $journal.content
+                    )
                 }
             }
         }
