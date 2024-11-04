@@ -1,16 +1,17 @@
 //
-//  JournalInputComponent.swift
+//  JournalDetailView.swift
 //  Kansho
 //
-//  Created by Dason Tiovino on 28/10/24.
+//  Created by Dason Tiovino on 04/11/24.
 //
+
 
 import SwiftUI
 
-struct JournalInputComponent: View {
+struct JournalDetailView: View {
+    @Binding var model: JournalModel
     
-    @State private var journalTitle: String = ""
-    @State private var journalDescription: String = ""
+    var function: ()->Void
     
     var body: some View {
         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
@@ -18,7 +19,7 @@ struct JournalInputComponent: View {
             .overlay {
                 ZStack {
                     VStack(alignment: .leading){
-                        TextField(text: $journalTitle, label: {
+                        TextField(text: $model.title, label: {
                             Text("Journal title today...")
                         })
                         .font(.themeTitle3())
@@ -26,21 +27,15 @@ struct JournalInputComponent: View {
                         Divider()
                             .padding(.bottom, 5)
                         
-                        TextField(text: $journalDescription, label: {
-                            Text("Write your thoughts here...")
-                        })
-                        .font(.themeBody())
-                        .frame(
-                            maxHeight: .infinity,
-                            alignment: Alignment(
-                                horizontal: .leading,
-                                vertical: .top
-                            )
-                        )
+                        
+                        TextEditor(text: $model.content)
+                            .scrollContentBackground(.hidden)
+                            .background(Color.clear) // Makes the background clear
+                            .font(.themeBody())
                         
                         
                         HStack{
-                            Button(action: {}){
+                            Button(action: function){
                                 RoundedRectangle(cornerSize: CGSize(
                                     width: 15,
                                     height: 15

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF041D582CD8A0EB0003D03E /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF041D572CD8A0E80003D03E /* JournalDetailView.swift */; };
 		EF08E6C32CC91D6D00905CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */; };
 		EF08E6C42CC91D6D00905CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */; };
 		EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C02CC91D6D00905CCB /* ContentView.swift */; };
@@ -14,7 +15,6 @@
 		EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C72CC91D7000905CCB /* KanshoTests.swift */; };
 		EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */; };
 		EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */; };
-		EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */; };
 		EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */; };
 		EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */; };
 		EF230E462CD7BBBA00151BD3 /* JournalNotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */; };
@@ -59,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF041D572CD8A0E80003D03E /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 		EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF08E6C02CC91D6D00905CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		EF08E6C72CC91D7000905CCB /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
 		EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
 		EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalInputComponent.swift; sourceTree = "<group>"; };
 		EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModel.swift; sourceTree = "<group>"; };
 		EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalNotificationButton.swift; sourceTree = "<group>"; };
@@ -210,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */,
-				EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -336,6 +335,7 @@
 			children = (
 				EF1667C32CCFF36800F22DAA /* Components */,
 				EFE5281F2CCD712B00650C8D /* JournalView.swift */,
+				EF041D572CD8A0E80003D03E /* JournalDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,9 +524,9 @@
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */,
+				EF041D582CD8A0EB0003D03E /* JournalDetailView.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
 				EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */,
-				EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */,
 				EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
