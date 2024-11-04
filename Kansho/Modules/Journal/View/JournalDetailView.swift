@@ -12,6 +12,8 @@ struct JournalDetailView: View {
     @Binding var journalTitle: String
     @Binding var journalContent: String
     
+    var function: ()->Void
+    
     var body: some View {
         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
             .fill(.appPrimary)
@@ -34,7 +36,7 @@ struct JournalDetailView: View {
                         
                         
                         HStack{
-                            Button(action: {}){
+                            Button(action: function){
                                 RoundedRectangle(cornerSize: CGSize(
                                     width: 15,
                                     height: 15

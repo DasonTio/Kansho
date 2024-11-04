@@ -48,4 +48,20 @@ class JournalViewModel: ObservableObject{
             debugPrint("Remove Journal Error: ", error)
         }
     }
+    
+    @MainActor public func updateJournal(_ journal: JournalModel) {
+        do{
+            let fetchDescriptor = FetchDescriptor<JournalModelLocal>(predicate: #Predicate{$0.id == journal.id})
+            let fetchedJournal = try container.mainContext.fetch(fetchDescriptor)
+            
+            if let firstData = fetchedJournal.first {
+                firstData.title = journal.title
+                firstData.content = journal.content
+                try container.mainContext.save()
+                fetch()
+            }
+        }catch{
+            debugPrint("Update Journal Error: ", error)
+        }
+    }
 }

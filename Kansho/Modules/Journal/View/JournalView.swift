@@ -76,7 +76,9 @@ struct JournalView: View {
                     JournalDetailView(
                         journalTitle: $journal.title,
                         journalContent: $journal.content
-                    )
+                    ){
+                        journalViewModel.updateJournal(journal)
+                    }
                 }
             }
         }
