@@ -26,17 +26,11 @@ struct JournalDetailView: View {
                         Divider()
                             .padding(.bottom, 5)
                         
-                        TextField(text: $journalContent, label: {
-                            Text("Write your thoughts here...")
-                        })
-                        .font(.themeBody())
-                        .frame(
-                            maxHeight: .infinity,
-                            alignment: Alignment(
-                                horizontal: .leading,
-                                vertical: .top
-                            )
-                        )
+                        
+                        TextEditor(text: $journalContent)
+                            .scrollContentBackground(.hidden)
+                            .background(Color.clear) // Makes the background clear
+                            .font(.themeBody())
                         
                         
                         HStack{

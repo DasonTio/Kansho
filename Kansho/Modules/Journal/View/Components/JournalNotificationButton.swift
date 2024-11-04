@@ -11,7 +11,6 @@ struct JournalNotificationButton: View{
     var function: () -> Void
     
     var body: some View{
-
             Button(action: function){
                 RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                     .fill(.appSecondary)

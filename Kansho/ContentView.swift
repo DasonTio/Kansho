@@ -42,7 +42,6 @@ struct ContentView: View {
                                 )
                                 .id(2)
                         } .onChange(of: currentPage) { newPage in
-                            // Programmatically snap to the page when currentPage changes
                             withAnimation {
                                 proxy.scrollTo(newPage, anchor: .top)
                             }
