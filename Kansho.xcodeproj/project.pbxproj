@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0401A02CD9C1BE0024AC10 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04019F2CD9C1BC0024AC10 /* ImagePicker.swift */; };
+		EF0401A22CD9C6DC0024AC10 /* JournalCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0401A12CD9C6D50024AC10 /* JournalCameraView.swift */; };
+		EF0401A42CD9D0300024AC10 /* RoutingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0401A32CD9D02E0024AC10 /* RoutingManager.swift */; };
 		EF041D582CD8A0EB0003D03E /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF041D572CD8A0E80003D03E /* JournalDetailView.swift */; };
 		EF08E6C32CC91D6D00905CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */; };
 		EF08E6C42CC91D6D00905CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF04019F2CD9C1BC0024AC10 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EF0401A12CD9C6D50024AC10 /* JournalCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCameraView.swift; sourceTree = "<group>"; };
+		EF0401A32CD9D02E0024AC10 /* RoutingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingManager.swift; sourceTree = "<group>"; };
 		EF041D572CD8A0E80003D03E /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 		EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 		EF08E6BF2CC91D6D00905CCB /* ReusableComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EF04019F2CD9C1BC0024AC10 /* ImagePicker.swift */,
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 		EF2657792CCC141C00D7A69E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EF0401A32CD9D02E0024AC10 /* RoutingManager.swift */,
 				EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */,
 				EF26577A2CCC142200D7A69E /* HapticManager.swift */,
 			);
@@ -336,6 +344,7 @@
 				EF1667C32CCFF36800F22DAA /* Components */,
 				EFE5281F2CCD712B00650C8D /* JournalView.swift */,
 				EF041D572CD8A0E80003D03E /* JournalDetailView.swift */,
+				EF0401A12CD9C6D50024AC10 /* JournalCameraView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,6 +524,7 @@
 			files = (
 				EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */,
 				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
+				EF0401A42CD9D0300024AC10 /* RoutingManager.swift in Sources */,
 				EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */,
 				EF230E462CD7BBBA00151BD3 /* JournalNotificationButton.swift in Sources */,
 				EFE528202CCD712C00650C8D /* JournalView.swift in Sources */,
@@ -526,7 +536,9 @@
 				EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */,
 				EF041D582CD8A0EB0003D03E /* JournalDetailView.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
+				EF0401A02CD9C1BE0024AC10 /* ImagePicker.swift in Sources */,
 				EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */,
+				EF0401A22CD9C6DC0024AC10 /* JournalCameraView.swift in Sources */,
 				EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

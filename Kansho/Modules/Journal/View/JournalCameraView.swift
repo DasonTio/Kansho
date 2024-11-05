@@ -13,7 +13,9 @@ struct JournalCameraView: View {
         NavigationView{
             VStack{
                 ImagePicker(image: $pickedImage)
+                    .ignoresSafeArea()
             }
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
+

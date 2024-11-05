@@ -9,7 +9,10 @@
 import SwiftUI
 
 struct JournalDetailView: View {
+    @EnvironmentObject var routingManager: RoutingManager
     @Binding var model: JournalModel
+    @State var showImagePicker: Bool = false
+    @State var pickedImage: UIImage? = nil
     
     var function: ()->Void
     
@@ -19,6 +22,24 @@ struct JournalDetailView: View {
             .overlay {
                 ZStack {
                     VStack(alignment: .leading){
+                        Button(action:{
+                            print("Navigation")
+                            routingManager.navigate(to: .journalCameraView)
+                        }){
+                            Image(systemName: "camera")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(.blue)
+                        }
+                        .frame(width: 100, height: 100)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
+                                .foregroundColor(.blue)
+                        )
+                        
                         TextField(text: $model.title, label: {
                             Text("Journal title today...")
                         })
@@ -30,7 +51,7 @@ struct JournalDetailView: View {
                         
                         TextEditor(text: $model.content)
                             .scrollContentBackground(.hidden)
-                            .background(Color.clear) // Makes the background clear
+                            .background(Color.clear)
                             .font(.themeBody())
                         
                         
