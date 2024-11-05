@@ -23,22 +23,24 @@ struct JournalDetailView: View {
                 ZStack {
                     VStack(alignment: .leading){
                         Button(action:{
-                            print("Navigation")
                             routingManager.navigate(to: .journalCameraView)
                         }){
-                            Image(systemName: "camera")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 40, height: 40)
-                                .foregroundColor(.blue)
-                        }
-                        .frame(width: 100, height: 100)
-                        .background(Color.clear)
-                        .overlay(
                             RoundedRectangle(cornerRadius: 15)
                                 .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
-                                .foregroundColor(.blue)
-                        )
+                                .foregroundColor(.appSecondary.opacity(0.5))
+                                .overlay{
+                                    Image(systemName: "photo")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 40, height: 40)
+                                        .foregroundColor(.appSecondary.opacity(0.5))
+                                }
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: 500)
+                        .background(Color.clear)
+                        
+                        Spacer()
+                            .frame(height: 30)
                         
                         TextField(text: $model.title, label: {
                             Text("Journal title today...")

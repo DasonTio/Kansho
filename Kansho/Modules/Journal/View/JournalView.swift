@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct JournalView: View {
+    @EnvironmentObject var routingManager: RoutingManager
     @EnvironmentObject var relaxViewModel: RelaxViewModel
     @EnvironmentObject var journalViewModel: JournalViewModel
     @State private var showTimerNotification: Bool = false
@@ -102,6 +103,12 @@ struct JournalView: View {
                     }
                 }).store(in: &cancellables)
                 
+                routingManager.pickedImage.publisher.sink(
+                    receiveValue: {value in
+                        sheetModel.image = value
+                        journalViewModel.updateJournal(sheetModel)
+                }).store(in: &cancellables)
+                
             }
         }
         
@@ -112,4 +119,5 @@ struct JournalView: View {
     JournalView()
         .environmentObject(RelaxViewModel(hapticManager: .init()))
         .environmentObject(JournalViewModel())
+        .environmentObject(RoutingManager())
 }

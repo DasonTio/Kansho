@@ -11,10 +11,8 @@ struct JournalCameraView: View {
     @Binding var pickedImage: UIImage?
     var body: some View {
         NavigationView{
-            VStack{
-                ImagePicker(image: $pickedImage)
-                    .ignoresSafeArea()
-            }
+            ImagePicker(image: $pickedImage)
+                .ignoresSafeArea()    
         }.navigationBarBackButtonHidden()
     }
 }

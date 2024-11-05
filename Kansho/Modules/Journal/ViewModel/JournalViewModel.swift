@@ -55,9 +55,14 @@ class JournalViewModel: ObservableObject{
             let fetchedJournal = try container.mainContext.fetch(fetchDescriptor)
             
             if let firstData = fetchedJournal.first {
-                firstData.title = journal.title
-                firstData.content = journal.content
+                let journalData = journal.toJournalLocal()
+                
+                firstData.title = journalData.title
+                firstData.content = journalData.content
+                firstData.imageData = journalData.imageData
+                
                 try container.mainContext.save()
+                
                 fetch()
             }
         }catch{
