@@ -21,7 +21,6 @@ class RoutingManager: ObservableObject {
 
     func navigate(to destination: Destination, with data: UIImage? = nil) {
         path.append(destination)
-        pickedImage = data
     }
     
     func back() {

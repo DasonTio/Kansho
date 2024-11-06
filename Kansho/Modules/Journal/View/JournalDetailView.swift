@@ -25,18 +25,35 @@ struct JournalDetailView: View {
                         Button(action:{
                             routingManager.navigate(to: .journalCameraView)
                         }){
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
-                                .foregroundColor(.appSecondary.opacity(0.5))
-                                .overlay{
-                                    Image(systemName: "photo")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 40, height: 40)
-                                        .foregroundColor(.appSecondary.opacity(0.5))
-                                }
+                            
+                            if let uiImage = model.image {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
+                                    .foregroundColor(.appSecondary.opacity(0.5))
+                                    .overlay{
+                                        Image(uiImage: uiImage)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                                    }
+                                    .clipped()
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                    
+                            }else{
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
+                                    .foregroundColor(.appSecondary.opacity(0.5))
+                                    .overlay{
+                                        Image(systemName: "photo")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 40, height: 40)
+                                            .foregroundColor(.appSecondary.opacity(0.5))
+                                    }
+                            }
+                            
                         }
-                        .frame(maxWidth: .infinity, maxHeight: 500)
+                        .frame(maxWidth: .infinity, maxHeight: 300)
                         .background(Color.clear)
                         
                         Spacer()

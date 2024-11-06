@@ -37,7 +37,11 @@ struct ImagePicker: UIViewControllerRepresentable {
             if let uiImage = info[.originalImage] as? UIImage {
                 parent.image = uiImage
                 parent.routingManager.pickedImage = uiImage
+                
+                
+                print("Testing image picker")
             }
+            
             parent.presentationMode.wrappedValue.dismiss()
             parent.routingManager.back()
         }
