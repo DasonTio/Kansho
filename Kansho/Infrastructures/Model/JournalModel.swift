@@ -24,7 +24,8 @@ struct JournalModel: Identifiable, Codable, Hashable {
         }
     }
     
-    init(title: String, content: String, imageData: Data? = nil) {
+    init(id:UUID = .init(), title: String, content: String, imageData: Data? = nil) {
+        self.id = id
         self.title = title
         self.content = content
         self.imageData = imageData

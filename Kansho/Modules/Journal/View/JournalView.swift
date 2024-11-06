@@ -12,13 +12,11 @@ struct JournalView: View {
     @EnvironmentObject var routingManager: RoutingManager
     @EnvironmentObject var relaxViewModel: RelaxViewModel
     @EnvironmentObject var journalViewModel: JournalViewModel
+    
     @State private var showTimerNotification: Bool = false
     @State private var cancellables: [AnyCancellable] = []
     @State private var showSheet: Bool = false
-    @State private var sheetModel: JournalModel = .init(
-        title: "Empty",
-        content: "Empty"
-    )
+    @State private var sheetModel: JournalModel? = nil
     
     var body: some View {
         NavigationView{
@@ -55,7 +53,6 @@ struct JournalView: View {
                 ForEach($journalViewModel.data, id: \.self){ $journal in
                     Button(action: {
                         showSheet = true
-                        sheetModel = journal
                     }){
                         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                             .fill(.appPrimary)
@@ -80,10 +77,17 @@ struct JournalView: View {
                             .padding(.horizontal, 15)
                             .padding(.top, 10)
                     }.sheet(isPresented: $showSheet){
-                        JournalDetailView(model: $sheetModel){
+                        JournalDetailView(model: $journal){
                             showSheet = false
-                            journalViewModel.updateJournal(sheetModel)
+                            journalViewModel.updateJournal($journal.wrappedValue)
                         }
+                    }
+                    .onAppear{
+                        routingManager.pickedImage.publisher.sink(
+                            receiveValue: {value in
+                                journal.image = value
+                                journalViewModel.updateJournal(journal)
+                        }).store(in: &cancellables)
                     }
                 }
             }
@@ -102,13 +106,6 @@ struct JournalView: View {
                         showTimerNotification = value
                     }
                 }).store(in: &cancellables)
-                
-                routingManager.pickedImage.publisher.sink(
-                    receiveValue: {value in
-                        sheetModel.image = value
-                        journalViewModel.updateJournal(sheetModel)
-                }).store(in: &cancellables)
-                
             }
         }
         
