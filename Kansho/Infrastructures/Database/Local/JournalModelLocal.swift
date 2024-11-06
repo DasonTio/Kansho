@@ -11,13 +11,15 @@ import Foundation
 
 @Model
 class JournalModelLocal: Identifiable {
-    var id: UUID
+    @Attribute(.unique)
+    var journalID: UUID
+        
     var title: String
     var content: String
     var imageData: Data? = nil
     
     init(id: UUID = UUID(), title: String, content: String, image: UIImage? = nil) {
-        self.id = id
+        self.journalID = id
         self.title = title
         self.content = content
         self.imageData = image?.jpegData(compressionQuality: 1.0)
@@ -26,6 +28,6 @@ class JournalModelLocal: Identifiable {
 
 extension JournalModelLocal{
     func toJournal() -> JournalModel {
-        .init(title: title, content: content, imageData: imageData)
+        .init(id: journalID, title: title, content: content, imageData: imageData)
     }
 }
