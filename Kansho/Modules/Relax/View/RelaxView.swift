@@ -11,16 +11,18 @@ struct RelaxView: View {
     @EnvironmentObject var relaxViewModel: RelaxViewModel
     
     var body: some View {
-        ZStack{
-            VStack{
-                RelaxViewMainLayout()
-                    .environmentObject(relaxViewModel)
-                
-                RelaxViewFooterLayout()
-                
-                
+        NavigationView{
+            ZStack{
+                VStack{
+                    RelaxViewMainLayout()
+                        .environmentObject(relaxViewModel)
+                    
+                    RelaxViewFooterLayout()
+                        .padding(.bottom, 100)
+                }
             }
-        }.padding()
+        }
+        .padding()
         .onAppear{
             self.relaxViewModel.hapticManager.prepareHapticEngine()
         }

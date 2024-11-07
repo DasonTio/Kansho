@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0401A02CD9C1BE0024AC10 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04019F2CD9C1BC0024AC10 /* ImagePicker.swift */; };
+		EF0401A22CD9C6DC0024AC10 /* JournalCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0401A12CD9C6D50024AC10 /* JournalCameraView.swift */; };
+		EF0401A42CD9D0300024AC10 /* RoutingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0401A32CD9D02E0024AC10 /* RoutingManager.swift */; };
+		EF041D582CD8A0EB0003D03E /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF041D572CD8A0E80003D03E /* JournalDetailView.swift */; };
 		EF08E6C32CC91D6D00905CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */; };
 		EF08E6C42CC91D6D00905CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */; };
 		EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C02CC91D6D00905CCB /* ContentView.swift */; };
@@ -14,9 +18,9 @@
 		EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C72CC91D7000905CCB /* KanshoTests.swift */; };
 		EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */; };
 		EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */; };
-		EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */; };
 		EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */; };
 		EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */; };
+		EF230E462CD7BBBA00151BD3 /* JournalNotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */; };
 		EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26577A2CCC142200D7A69E /* HapticManager.swift */; };
 		EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */; };
 		EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */; };
@@ -34,10 +38,10 @@
 		EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */; };
 		EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */; };
 		EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */; };
+		EFD37A2A2CD3E11B0012BDBE /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */; };
 		EFE528202CCD712C00650C8D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5281F2CCD712B00650C8D /* JournalView.swift */; };
 		EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE528222CCD722100650C8D /* RelaxViewModel.swift */; };
 		EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF1153F2CD143220038D212 /* JournalModelLocal.swift */; };
-		EFF115432CD144CD0038D212 /* JournalModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF115422CD144C90038D212 /* JournalModelDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF04019F2CD9C1BC0024AC10 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EF0401A12CD9C6D50024AC10 /* JournalCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCameraView.swift; sourceTree = "<group>"; };
+		EF0401A32CD9D02E0024AC10 /* RoutingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingManager.swift; sourceTree = "<group>"; };
+		EF041D572CD8A0E80003D03E /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 		EF08E6BB2CC91D6D00905CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF08E6C02CC91D6D00905CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,9 +73,9 @@
 		EF08E6C72CC91D7000905CCB /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
 		EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
 		EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalInputComponent.swift; sourceTree = "<group>"; };
 		EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModel.swift; sourceTree = "<group>"; };
+		EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalNotificationButton.swift; sourceTree = "<group>"; };
 		EF26577A2CCC142200D7A69E /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		EF26A74E2CCCEF1500B7114C /* RelaxViewMainLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewMainLayout.swift; sourceTree = "<group>"; };
 		EF26A7502CCCF0D800B7114C /* RelaxViewFooterLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewFooterLayout.swift; sourceTree = "<group>"; };
@@ -89,10 +97,10 @@
 		EF7F531E2CC16BF100286047 /* Kansho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kansho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F532E2CC16BF300286047 /* KanshoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F53382CC16BF300286047 /* KanshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		EFE5281F2CCD712B00650C8D /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		EFE528222CCD722100650C8D /* RelaxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewModel.swift; sourceTree = "<group>"; };
 		EFF1153F2CD143220038D212 /* JournalModelLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModelLocal.swift; sourceTree = "<group>"; };
-		EFF115422CD144C90038D212 /* JournalModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModelDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 		EF08E6BF2CC91D6D00905CCB /* ReusableComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EF04019F2CD9C1BC0024AC10 /* ImagePicker.swift */,
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
@@ -207,7 +216,7 @@
 		EF1667C32CCFF36800F22DAA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EF1667C42CCFF36E00F22DAA /* JournalInputComponent.swift */,
+				EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -231,6 +240,8 @@
 		EF2657792CCC141C00D7A69E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EF0401A32CD9D02E0024AC10 /* RoutingManager.swift */,
+				EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */,
 				EF26577A2CCC142200D7A69E /* HapticManager.swift */,
 			);
 			path = Manager;
@@ -332,6 +343,8 @@
 			children = (
 				EF1667C32CCFF36800F22DAA /* Components */,
 				EFE5281F2CCD712B00650C8D /* JournalView.swift */,
+				EF041D572CD8A0E80003D03E /* JournalDetailView.swift */,
+				EF0401A12CD9C6D50024AC10 /* JournalCameraView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,18 +368,9 @@
 		EFF1153E2CD1431B0038D212 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				EFF115412CD144C30038D212 /* DTO */,
 				EFF1153D2CD1430D0038D212 /* Local */,
 			);
 			path = Database;
-			sourceTree = "<group>";
-		};
-		EFF115412CD144C30038D212 /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				EFF115422CD144C90038D212 /* JournalModelDTO.swift */,
-			);
-			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,18 +524,22 @@
 			files = (
 				EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */,
 				EF08E6C52CC91D6D00905CCB /* ContentView.swift in Sources */,
+				EF0401A42CD9D0300024AC10 /* RoutingManager.swift in Sources */,
 				EF26A7512CCCF0DC00B7114C /* RelaxViewFooterLayout.swift in Sources */,
+				EF230E462CD7BBBA00151BD3 /* JournalNotificationButton.swift in Sources */,
 				EFE528202CCD712C00650C8D /* JournalView.swift in Sources */,
 				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
 				EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */,
+				EFD37A2A2CD3E11B0012BDBE /* SwiftDataManager.swift in Sources */,
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */,
+				EF041D582CD8A0EB0003D03E /* JournalDetailView.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
+				EF0401A02CD9C1BE0024AC10 /* ImagePicker.swift in Sources */,
 				EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */,
-				EF1667C52CCFF37400F22DAA /* JournalInputComponent.swift in Sources */,
+				EF0401A22CD9C6DC0024AC10 /* JournalCameraView.swift in Sources */,
 				EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */,
-				EFF115432CD144CD0038D212 /* JournalModelDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +707,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kansho/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"We need your camera usage\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -730,6 +739,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kansho/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"We need your camera usage\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

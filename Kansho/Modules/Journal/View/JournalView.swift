@@ -9,62 +9,27 @@ import SwiftUI
 import Combine
 
 struct JournalView: View {
+    @EnvironmentObject var routingManager: RoutingManager
     @EnvironmentObject var relaxViewModel: RelaxViewModel
     @EnvironmentObject var journalViewModel: JournalViewModel
+    
     @State private var showTimerNotification: Bool = false
     @State private var cancellables: [AnyCancellable] = []
+    @State private var selectedJournal: JournalModel?
     
     var body: some View {
-        GeometryReader{ geometry in
-            let height = geometry.size.height / 100
-            let componentActive = showTimerNotification && relaxViewModel.isActive
-            
+        NavigationView{
             VStack (alignment: .leading, spacing: 0){
-                // MARK: Journaling
-                Button(action: {
-                    relaxViewModel.isJournaling.toggle()
-                }){
-                    RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
-                        .fill(.appSecondary)
-                        .overlay {
-                            HStack{
-                                VStack(alignment: .leading){
-                                    Text("Relax Session")
-                                        .font(.themeHeadline(weight: .heavy))
-                                        .foregroundStyle(.appPrimary)
-                                    
-                                    Text("Let's calm down and unwind")
-                                        .font(.themeBody())
-                                        .foregroundStyle(.appPrimary)
-                                }
-                                
-                                Spacer()
-                                
-                                Image(relaxViewModel.plantImage)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .animation(.easeInOut, value: relaxViewModel.plantImage)
-                            }
-                            .padding(.horizontal,20)
-                            .clipped()
-                            .cornerRadius(30)
-                        }
-                        .opacity(componentActive ? 1 : 0)
-                        .frame(
-                            height: componentActive ? height * 15 : 0
-                        )
-                        .animation(
-                            .timingCurve(.circularEaseInOut, duration: 0.5),
-                            value: componentActive
-                        )
-                        .padding(.horizontal, 15)
-                        .padding(.top, 47)
-                    
+                JournalNotificationButton(image: relaxViewModel.plantImage){
+                    // TODO: Trigger Relax
                 }
                 
                 // MARK: Add Journal Button
                 Button(action: {
-                    // TODO: Call Add Journal
+                    journalViewModel.addJournal(JournalModel(
+                        title: "Title",
+                        content: "Content"
+                    ))
                 }){
                     RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                         .fill(.white)
@@ -84,43 +49,62 @@ struct JournalView: View {
                 }
                 
                 // MARK: List All Journal
-                ForEach(journalViewModel.data){ journal in
+                ForEach(journalViewModel.data, id: \.id) { journal in
                     Button(action: {
-                        
-                    }){
+                        selectedJournal = journal
+                    }) {
                         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
-                            .fill(.appPrimary)
+                            .fill(Color.appPrimary)
                             .overlay {
-                                VStack(alignment: .leading){
+                                VStack(alignment: .leading) {
                                     Text(journal.title)
                                         .font(.themeTitle3(weight: .heavy))
-                                    Text(journal.description)
+                                        .lineLimit(1)
+                                    Text(journal.content)
                                         .font(.themeBody())
+                                        .lineLimit(1)
                                 }
-                                .frame(
-                                    maxWidth: .infinity,
-                                    alignment: Alignment(
-                                        horizontal: .leading,
-                                        vertical: .center
-                                    )
-                                ).padding(.horizontal, 25)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 25)
                             }
                             .frame(height: 100)
                             .padding(.horizontal, 15)
                             .padding(.top, 10)
                     }
+                    .sheet(item: $selectedJournal){ journal in
+                        JournalDetailView(id: journal.id)
+                    }
+                    .onAppear {
+                        routingManager.selectedJournal?.image.publisher.sink { value in
+                            if var updatedJournal = routingManager.selectedJournal{
+                                updatedJournal.image = value
+                                journalViewModel.updateJournal(updatedJournal)
+                            }
+                        }
+                        .store(in: &cancellables)
+                    }
                 }
+                
+                
+            }
+            .frame(
+                maxHeight: .infinity,
+                alignment: Alignment(
+                    horizontal: .leading,
+                    vertical: .top
+                )
+            )
+            .foregroundStyle(.appSecondary)
+            .onAppear {
+                journalViewModel.fetch()
+                relaxViewModel.$isJournaling.sink(receiveValue: {value in
+                    Timer.scheduledTimer(withTimeInterval: 1, repeats: false){_ in
+                        showTimerNotification = value
+                    }
+                }).store(in: &cancellables)
             }
         }
-        .foregroundStyle(.appSecondary)
-        .onAppear {
-            relaxViewModel.$isJournaling.sink(receiveValue: {value in
-                Timer.scheduledTimer(withTimeInterval: 1, repeats: false){_ in
-                    showTimerNotification = value
-                }
-            }).store(in: &cancellables)
-            
-        }
+        
     }
 }
 
@@ -128,4 +112,5 @@ struct JournalView: View {
     JournalView()
         .environmentObject(RelaxViewModel(hapticManager: .init()))
         .environmentObject(JournalViewModel())
+        .environmentObject(RoutingManager())
 }
