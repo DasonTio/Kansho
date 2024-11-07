@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct JournalCameraView: View {
-    @Binding var pickedImage: UIImage?
     var body: some View {
         NavigationView{
-            VStack{
-                ImagePicker(image: $pickedImage)
-            }
-        }
+            ImagePicker()
+                .ignoresSafeArea()    
+        }.navigationBarBackButtonHidden()
     }
 }
+

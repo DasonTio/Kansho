@@ -14,7 +14,14 @@ struct SwiftDataManager{
     
     init() {
         do{
-            container = try ModelContainer(for: JournalModelLocal.self)
+            container = try ModelContainer(
+                for: JournalModelLocal.self,
+                /// isStoredInMemoryOnly is for preview purpose
+                /// on: not saved in internal data
+                /// off: saved in internal data
+                configurations: ModelConfiguration(isStoredInMemoryOnly: false)
+            )
+            
             if let container{
                 context = ModelContext(container)
             }

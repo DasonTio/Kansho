@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var routingManager: RoutingManager
     @StateObject var journalViewModel: JournalViewModel = .init()
     @StateObject var relaxViewModel: RelaxViewModel = .init(
         hapticManager: .init()
     )
+    
     @State private var currentPage = 1
     
     var body: some View {
@@ -19,7 +21,7 @@ struct ContentView: View {
             let height = geometry.size.height / 100
             
             Color.background
-            NavigationStack{
+            NavigationStack(path: $routingManager.path){
                 ScrollViewReader { proxy in
                     ScrollView{
                         VStack(spacing: 0){
@@ -49,14 +51,23 @@ struct ContentView: View {
                         .gesture(
                             DragGesture()
                                 .onEnded { value in
-                                    // Detect vertical swipes
-                                    if value.translation.height < 0 { // Swipe up
+                                    if value.translation.height < 0 {
                                         currentPage = min(currentPage + 1, 2)
-                                    } else if value.translation.height > 0 { // Swipe down
+                                    } else if value.translation.height > 0 { 
                                         currentPage = max(currentPage - 1, 1)
                                     }
                                 }
                         )
+                    }
+                }
+                .navigationDestination(for: RoutingManager.Destination.self){destination in
+                    switch destination{
+                    case .relaxView:
+                        RelaxView()
+                    case .journalView:
+                        JournalView()
+                    case .journalCameraView:
+                        JournalCameraView()
                     }
                 }
             }
@@ -68,4 +79,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(RoutingManager())
 }

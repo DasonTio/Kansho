@@ -19,13 +19,27 @@ class JournalViewModel: ObservableObject{
         container = SwiftDataManager.shared.container
     }
     
-    @MainActor public func fetch(){
+    @MainActor public func fetch(){        
         let fetchDescriptor = FetchDescriptor<JournalModelLocal>()
         do{
             let journal = try container.mainContext.fetch(fetchDescriptor)
             data = journal.compactMap{$0.toJournal()}
+            print(data)
         }catch{
             debugPrint(error)
+        }
+    }
+    
+    @MainActor public func fetchById(_ id: UUID)->[JournalModel]{
+        do{
+            let fetchDescriptor = FetchDescriptor<JournalModelLocal>(predicate: #Predicate{model in
+                model.journalID == id
+            })
+            let journal = try container.mainContext.fetch(fetchDescriptor)
+            return journal.compactMap{$0.toJournal()}
+        }catch{
+            debugPrint(error)
+            return []
         }
     }
     
@@ -33,6 +47,7 @@ class JournalViewModel: ObservableObject{
         do{
             container.mainContext.insert(journal.toJournalLocal())
             try container.mainContext.save()
+            
             fetch()
         }catch{
             debugPrint("Add Journal Error: ", error)
@@ -51,12 +66,18 @@ class JournalViewModel: ObservableObject{
     
     @MainActor public func updateJournal(_ journal: JournalModel) {
         do{
-            let fetchDescriptor = FetchDescriptor<JournalModelLocal>(predicate: #Predicate{$0.id == journal.id})
+            let fetchDescriptor = FetchDescriptor<JournalModelLocal>(predicate: #Predicate{model in
+                model.journalID == journal.id
+            })
             let fetchedJournal = try container.mainContext.fetch(fetchDescriptor)
             
             if let firstData = fetchedJournal.first {
-                firstData.title = journal.title
-                firstData.content = journal.content
+                let journalData = journal.toJournalLocal()
+                
+                firstData.title = journalData.title
+                firstData.content = journalData.content
+                firstData.imageData = journalData.imageData
+                
                 try container.mainContext.save()
                 fetch()
             }
