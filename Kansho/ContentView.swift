@@ -67,7 +67,7 @@ struct ContentView: View {
                     case .journalView:
                         JournalView()
                     case .journalCameraView:
-                        JournalCameraView(pickedImage: $routingManager.pickedImage)
+                        JournalCameraView()
                     }
                 }
             }

@@ -9,7 +9,6 @@ import SwiftUI
 import UIKit
 
 struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var image: UIImage?
     @EnvironmentObject var routingManager: RoutingManager
     @Environment(\.presentationMode) var presentationMode
 
@@ -35,10 +34,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let uiImage = info[.originalImage] as? UIImage {
-                parent.image = uiImage
-                parent.routingManager.pickedImage = uiImage
-                
-                
+                parent.routingManager.selectedJournal?.image = uiImage
                 print("Testing image picker")
             }
             

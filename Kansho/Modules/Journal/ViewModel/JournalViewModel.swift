@@ -24,8 +24,22 @@ class JournalViewModel: ObservableObject{
         do{
             let journal = try container.mainContext.fetch(fetchDescriptor)
             data = journal.compactMap{$0.toJournal()}
+            print(data)
         }catch{
             debugPrint(error)
+        }
+    }
+    
+    @MainActor public func fetchById(_ id: UUID)->[JournalModel]{
+        do{
+            let fetchDescriptor = FetchDescriptor<JournalModelLocal>(predicate: #Predicate{model in
+                model.journalID == id
+            })
+            let journal = try container.mainContext.fetch(fetchDescriptor)
+            return journal.compactMap{$0.toJournal()}
+        }catch{
+            debugPrint(error)
+            return []
         }
     }
     

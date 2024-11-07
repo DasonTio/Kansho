@@ -15,8 +15,7 @@ struct JournalView: View {
     
     @State private var showTimerNotification: Bool = false
     @State private var cancellables: [AnyCancellable] = []
-    @State private var showSheet: Bool = false
-    @State private var sheetModel: JournalModel? = nil
+    @State private var selectedJournal: JournalModel?
     
     var body: some View {
         NavigationView{
@@ -50,46 +49,43 @@ struct JournalView: View {
                 }
                 
                 // MARK: List All Journal
-                ForEach($journalViewModel.data, id: \.self){ $journal in
+                ForEach(journalViewModel.data, id: \.id) { journal in
                     Button(action: {
-                        showSheet = true
-                    }){
+                        selectedJournal = journal
+                    }) {
                         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
-                            .fill(.appPrimary)
+                            .fill(Color.appPrimary)
                             .overlay {
-                                VStack(alignment: .leading){
-                                    Text($journal.wrappedValue.title)
+                                VStack(alignment: .leading) {
+                                    Text(journal.title)
                                         .font(.themeTitle3(weight: .heavy))
                                         .lineLimit(1)
-                                    Text($journal.wrappedValue.content)
+                                    Text(journal.content)
                                         .font(.themeBody())
                                         .lineLimit(1)
                                 }
-                                .frame(
-                                    maxWidth: .infinity,
-                                    alignment: Alignment(
-                                        horizontal: .leading,
-                                        vertical: .center
-                                    )
-                                ).padding(.horizontal, 25)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 25)
                             }
                             .frame(height: 100)
                             .padding(.horizontal, 15)
                             .padding(.top, 10)
-                    }.sheet(isPresented: $showSheet){
-                        JournalDetailView(model: $journal){
-                            showSheet = false
-                            journalViewModel.updateJournal($journal.wrappedValue)
-                        }
                     }
-                    .onAppear{
-                        routingManager.pickedImage.publisher.sink(
-                            receiveValue: {value in
-                                journal.image = value
-                                journalViewModel.updateJournal(journal)
-                        }).store(in: &cancellables)
+                    .sheet(item: $selectedJournal){ journal in
+                        JournalDetailView(id: journal.id)
+                    }
+                    .onAppear {
+                        routingManager.selectedJournal?.image.publisher.sink { value in
+                            if var updatedJournal = routingManager.selectedJournal{
+                                updatedJournal.image = value
+                                journalViewModel.updateJournal(updatedJournal)
+                            }
+                        }
+                        .store(in: &cancellables)
                     }
                 }
+                
+                
             }
             .frame(
                 maxHeight: .infinity,

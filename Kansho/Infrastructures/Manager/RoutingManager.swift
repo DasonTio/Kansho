@@ -17,7 +17,7 @@ class RoutingManager: ObservableObject {
     }
     
     @Published var path: NavigationPath = .init()
-    @Published var pickedImage: UIImage?
+    @Published var selectedJournal: JournalModel?
 
     func navigate(to destination: Destination, with data: UIImage? = nil) {
         path.append(destination)

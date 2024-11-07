@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct JournalCameraView: View {
-    @Binding var pickedImage: UIImage?
     var body: some View {
         NavigationView{
-            ImagePicker(image: $pickedImage)
+            ImagePicker()
                 .ignoresSafeArea()    
         }.navigationBarBackButtonHidden()
     }
