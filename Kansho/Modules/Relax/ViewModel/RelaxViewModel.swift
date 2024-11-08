@@ -6,8 +6,18 @@
 //
 import SwiftUI
 import Combine
+import AVFoundation
+
+
+enum RelaxOption{
+    case Haptic
+    case Breath
+}
 
 class RelaxViewModel: ObservableObject {
+    
+    @Published var currentStep: Int = 0;
+    @Published var breathState: BreathState = .BreathIn
     
     @Published var isActive: Bool = false
     @Published var isJournaling: Bool = false
@@ -15,13 +25,26 @@ class RelaxViewModel: ObservableObject {
     @Published var timer: Double = 0
     @Published var plantImage: String = "plant_0"
     
-    public let defaultMaxTimer:Double = 10
-    private var timerCancellable: AnyCancellable?
+    @Published var selectedRelaxOption: RelaxOption = .Haptic
+    
+    public let defaultMaxTimer:Double = 30
+    public var timerCancellable: AnyCancellable?
+    public var breathCancellable: AnyCancellable?
     public var hapticManager: HapticManager
+    
+    public var breathInAudio: AVAudioPlayer?
+    public var breathOutAudio: AVAudioPlayer?
     
     init(hapticManager: HapticManager) {
         self.hapticManager = hapticManager
         self.timer = defaultMaxTimer
+        
+        guard let breathInAudioPath = Bundle.main.path(forResource: "BreathIn", ofType: "m4a"),
+        let breathOutAudioPath = Bundle.main.path(forResource: "BreathOut", ofType: "m4a") else {
+            return
+        }
+        breathInAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: breathInAudioPath))
+        breathOutAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: breathOutAudioPath))
     }
     
     var timerDisplay: String {
@@ -40,7 +63,14 @@ class RelaxViewModel: ObservableObject {
     
     private func startTimer() {
         isActive = true
-        hapticManager.generateHapticPattern()
+        
+        switch selectedRelaxOption {
+            case .Haptic:
+                startHaptic()
+            case .Breath:
+                startBreath()
+        }
+        
         timerCancellable = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in
@@ -48,14 +78,21 @@ class RelaxViewModel: ObservableObject {
             }
     }
     
-    private func stopTimer() {
+    public func stopTimer() {
         isActive = false
         timer = defaultMaxTimer
-        hapticManager.stopHapticPattern()
+        
+        switch selectedRelaxOption {
+            case .Haptic:
+                stopHaptic()
+            case .Breath:
+                stopBreath()
+        }
+        
         timerCancellable?.cancel()
     }
     
-    private func updateTimer() {
+    public func updateTimer() {
         if timer > 0 {
             timer -= 1
             updatePlantImage()
