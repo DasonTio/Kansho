@@ -19,7 +19,7 @@ struct SwiftDataManager{
                 /// isStoredInMemoryOnly is for preview purpose
                 /// on: not saved in internal data
                 /// off: saved in internal data
-                configurations: ModelConfiguration(isStoredInMemoryOnly: false)
+                configurations: ModelConfiguration(isStoredInMemoryOnly: true)
             )
             
             if let container{
