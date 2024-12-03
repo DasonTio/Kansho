@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var mqttManager:MQTTManager = MQTTManager.shared
     @EnvironmentObject var routingManager: RoutingManager
     @StateObject var journalViewModel: JournalViewModel = .init()
     @StateObject var relaxViewModel: RelaxViewModel = .init(
@@ -69,6 +70,11 @@ struct ContentView: View {
                     case .journalCameraView:
                         JournalCameraView()
                     }
+                }
+                .onAppear{
+                    mqttManager.connect()
+                    mqttManager.publish(message: "Testing Ges", onTopic: "/will")
+                    mqttManager.subscribe(topic: "Dason/Mobile/Haptic")
                 }
             }
         }

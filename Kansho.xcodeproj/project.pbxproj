@@ -38,6 +38,8 @@
 		EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */; };
 		EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */; };
 		EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */; };
+		EF3BC1712CFF5A9F00CDD3AD /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = EF3BC1702CFF5A9F00CDD3AD /* CocoaMQTT */; };
+		EF3BC1752CFF5B3000CDD3AD /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC1742CFF5B2D00CDD3AD /* MQTTManager.swift */; };
 		EF4035D42CDE5222006F0AB3 /* RelaxViewModel+Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4035D32CDE521D006F0AB3 /* RelaxViewModel+Haptic.swift */; };
 		EF4035D62CDE5231006F0AB3 /* RelaxViewModel+Breath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4035D52CDE522D006F0AB3 /* RelaxViewModel+Breath.swift */; };
 		EF4035DA2CDE5596006F0AB3 /* BreathOut.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF4035D92CDE5596006F0AB3 /* BreathOut.m4a */; };
@@ -98,6 +100,7 @@
 		EF26BA072CCA7872007C3CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Avenir.swift"; sourceTree = "<group>"; };
 		EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
+		EF3BC1742CFF5B2D00CDD3AD /* MQTTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
 		EF4035D32CDE521D006F0AB3 /* RelaxViewModel+Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelaxViewModel+Haptic.swift"; sourceTree = "<group>"; };
 		EF4035D52CDE522D006F0AB3 /* RelaxViewModel+Breath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelaxViewModel+Breath.swift"; sourceTree = "<group>"; };
 		EF4035D82CDE5596006F0AB3 /* BreathIn.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = BreathIn.m4a; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3BC1712CFF5A9F00CDD3AD /* CocoaMQTT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +253,7 @@
 		EF2657792CCC141C00D7A69E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EF3BC1742CFF5B2D00CDD3AD /* MQTTManager.swift */,
 				EF0401A32CD9D02E0024AC10 /* RoutingManager.swift */,
 				EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */,
 				EF26577A2CCC142200D7A69E /* HapticManager.swift */,
@@ -410,6 +415,7 @@
 			);
 			name = Kansho;
 			packageProductDependencies = (
+				EF3BC1702CFF5A9F00CDD3AD /* CocoaMQTT */,
 			);
 			productName = Kansho;
 			productReference = EF7F531E2CC16BF100286047 /* Kansho.app */;
@@ -487,6 +493,9 @@
 			);
 			mainGroup = EF7F53152CC16BF100286047;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EF3BC16F2CFF5A9F00CDD3AD /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EF7F531F2CC16BF100286047 /* Products */;
 			projectDirPath = "";
@@ -557,6 +566,7 @@
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */,
+				EF3BC1752CFF5B3000CDD3AD /* MQTTManager.swift in Sources */,
 				EF041D582CD8A0EB0003D03E /* JournalDetailView.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
 				EF0401A02CD9C1BE0024AC10 /* ImagePicker.swift in Sources */,
@@ -895,6 +905,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF3BC16F2CFF5A9F00CDD3AD /* XCRemoteSwiftPackageReference "CocoaMQTT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emqx/CocoaMQTT";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF3BC1702CFF5A9F00CDD3AD /* CocoaMQTT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF3BC16F2CFF5A9F00CDD3AD /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
+			productName = CocoaMQTT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF7F53162CC16BF100286047 /* Project object */;
 }
