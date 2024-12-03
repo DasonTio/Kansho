@@ -54,7 +54,7 @@ class RelaxViewModel: ObservableObject {
     }
     
     func toggleTimer() {
-        MQTTManager.shared.publish(message: "Publish", onTopic: "Dason/Mobile/Haptic")
+        MQTTManager.shared.publish(message: "Publish", onTopic: "Dason/Mobile/Haptic", qos: .qos1)
         if isActive {
             stopTimer()
         } else {

@@ -73,8 +73,7 @@ struct ContentView: View {
                 }
                 .onAppear{
                     mqttManager.connect()
-                    mqttManager.publish(message: "Testing Ges", onTopic: "/will")
-                    mqttManager.subscribe(topic: "Dason/Mobile/Haptic")
+//                    mqttManager.subscribe(topic: "Dason/Mobile/Haptic", qos: .qos1)
                 }
             }
         }

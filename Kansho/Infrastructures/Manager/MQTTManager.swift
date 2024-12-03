@@ -64,8 +64,8 @@ class MQTTManager: NSObject {
         mqtt?.disconnect()
     }
 
-    func publish(message: String, onTopic topic: String, qos: CocoaMQTTQoS = .qos1) {
-        mqtt?.publish(topic, withString: message, qos: qos, retained: false)
+    func publish(message: String, onTopic topic: String, qos: CocoaMQTTQoS = .qos1, retained:Bool = true) {
+        mqtt?.publish(topic, withString: message, qos: qos, retained: retained)
         print("Try To Publish")
     }
 
