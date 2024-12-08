@@ -18,6 +18,7 @@
 		EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6C72CC91D7000905CCB /* KanshoTests.swift */; };
 		EF08E6CD2CC91D7200905CCB /* KanshoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */; };
 		EF08E6CE2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */; };
+		EF1307C82D05AB2800402C3E /* RelaxViewUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1307C72D05AB2200402C3E /* RelaxViewUnitTests.swift */; };
 		EF1667C82CCFF48000F22DAA /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */; };
 		EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */; };
 		EF230E462CD7BBBA00151BD3 /* JournalNotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */; };
@@ -38,6 +39,12 @@
 		EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF26B9F72CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf */; };
 		EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */; };
 		EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */; };
+		EF3BC1752CFF5B3000CDD3AD /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BC1742CFF5B2D00CDD3AD /* MQTTManager.swift */; };
+		EF4035D42CDE5222006F0AB3 /* RelaxViewModel+Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4035D32CDE521D006F0AB3 /* RelaxViewModel+Haptic.swift */; };
+		EF4035D62CDE5231006F0AB3 /* RelaxViewModel+Breath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4035D52CDE522D006F0AB3 /* RelaxViewModel+Breath.swift */; };
+		EF4035DA2CDE5596006F0AB3 /* BreathOut.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF4035D92CDE5596006F0AB3 /* BreathOut.m4a */; };
+		EF4035DB2CDE5596006F0AB3 /* BreathIn.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF4035D82CDE5596006F0AB3 /* BreathIn.m4a */; };
+		EF9AB2032D00031600670031 /* SwiftMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = EF9AB2022D00031600670031 /* SwiftMQTT */; };
 		EFD37A2A2CD3E11B0012BDBE /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */; };
 		EFE528202CCD712C00650C8D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5281F2CCD712B00650C8D /* JournalView.swift */; };
 		EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE528222CCD722100650C8D /* RelaxViewModel.swift */; };
@@ -73,6 +80,7 @@
 		EF08E6C72CC91D7000905CCB /* KanshoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoTests.swift; sourceTree = "<group>"; };
 		EF08E6CA2CC91D7200905CCB /* KanshoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITests.swift; sourceTree = "<group>"; };
 		EF08E6CB2CC91D7200905CCB /* KanshoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanshoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF1307C72D05AB2200402C3E /* RelaxViewUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewUnitTests.swift; sourceTree = "<group>"; };
 		EF1667C72CCFF47D00F22DAA /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		EF1667CA2CCFF4BE00F22DAA /* JournalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalModel.swift; sourceTree = "<group>"; };
 		EF230E452CD7BBAD00151BD3 /* JournalNotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalNotificationButton.swift; sourceTree = "<group>"; };
@@ -94,6 +102,11 @@
 		EF26BA072CCA7872007C3CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EF26BA092CCA7BB3007C3CD8 /* Font+Avenir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Avenir.swift"; sourceTree = "<group>"; };
 		EF26BA0D2CCA86DA007C3CD8 /* RelaxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
+		EF3BC1742CFF5B2D00CDD3AD /* MQTTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
+		EF4035D32CDE521D006F0AB3 /* RelaxViewModel+Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelaxViewModel+Haptic.swift"; sourceTree = "<group>"; };
+		EF4035D52CDE522D006F0AB3 /* RelaxViewModel+Breath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelaxViewModel+Breath.swift"; sourceTree = "<group>"; };
+		EF4035D82CDE5596006F0AB3 /* BreathIn.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = BreathIn.m4a; sourceTree = "<group>"; };
+		EF4035D92CDE5596006F0AB3 /* BreathOut.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = BreathOut.m4a; sourceTree = "<group>"; };
 		EF7F531E2CC16BF100286047 /* Kansho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kansho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F532E2CC16BF300286047 /* KanshoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F53382CC16BF300286047 /* KanshoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanshoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9AB2032D00031600670031 /* SwiftMQTT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +181,7 @@
 			children = (
 				EF08E6BC2CC91D6D00905CCB /* Preview Content */,
 				EF26B9EC2CCA77D0007C3CD8 /* Fonts */,
+				EF4035D72CDE558C006F0AB3 /* Audio */,
 				EF08E6BD2CC91D6D00905CCB /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -199,6 +214,7 @@
 		EF08E6C82CC91D7000905CCB /* KanshoTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF1307C72D05AB2200402C3E /* RelaxViewUnitTests.swift */,
 				EF08E6C72CC91D7000905CCB /* KanshoTests.swift */,
 			);
 			path = KanshoTests;
@@ -243,6 +259,7 @@
 				EF0401A32CD9D02E0024AC10 /* RoutingManager.swift */,
 				EFD37A292CD3E1180012BDBE /* SwiftDataManager.swift */,
 				EF26577A2CCC142200D7A69E /* HapticManager.swift */,
+				EF3BC1742CFF5B2D00CDD3AD /* MQTTManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -309,6 +326,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EF4035D72CDE558C006F0AB3 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				EF4035D82CDE5596006F0AB3 /* BreathIn.m4a */,
+				EF4035D92CDE5596006F0AB3 /* BreathOut.m4a */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		EF7F53152CC16BF100286047 = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +378,8 @@
 		EFE528212CCD721D00650C8D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF4035D52CDE522D006F0AB3 /* RelaxViewModel+Breath.swift */,
+				EF4035D32CDE521D006F0AB3 /* RelaxViewModel+Haptic.swift */,
 				EFE528222CCD722100650C8D /* RelaxViewModel.swift */,
 			);
 			path = ViewModel;
@@ -390,6 +418,7 @@
 			);
 			name = Kansho;
 			packageProductDependencies = (
+				EF9AB2022D00031600670031 /* SwiftMQTT */,
 			);
 			productName = Kansho;
 			productReference = EF7F531E2CC16BF100286047 /* Kansho.app */;
@@ -467,6 +496,9 @@
 			);
 			mainGroup = EF7F53152CC16BF100286047;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EF9AB2012D00031600670031 /* XCRemoteSwiftPackageReference "SwiftMQTT" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EF7F531F2CC16BF100286047 /* Products */;
 			projectDirPath = "";
@@ -495,6 +527,8 @@
 				EF26BA032CCA783D007C3CD8 /* AvenirLTStd-Oblique.otf in Resources */,
 				EF26BA042CCA783D007C3CD8 /* AvenirLTStd-BlackOblique.otf in Resources */,
 				EF26BA052CCA783D007C3CD8 /* AvenirLTStd-Heavy.otf in Resources */,
+				EF4035DA2CDE5596006F0AB3 /* BreathOut.m4a in Resources */,
+				EF4035DB2CDE5596006F0AB3 /* BreathIn.m4a in Resources */,
 				EF26BA062CCA783D007C3CD8 /* AvenirLTStd-MediumOblique.otf in Resources */,
 				EF08E6C32CC91D6D00905CCB /* Preview Assets.xcassets in Resources */,
 				EF08E6C42CC91D6D00905CCB /* Assets.xcassets in Resources */,
@@ -529,14 +563,17 @@
 				EF230E462CD7BBBA00151BD3 /* JournalNotificationButton.swift in Sources */,
 				EFE528202CCD712C00650C8D /* JournalView.swift in Sources */,
 				EF26577B2CCC142600D7A69E /* HapticManager.swift in Sources */,
+				EF4035D62CDE5231006F0AB3 /* RelaxViewModel+Breath.swift in Sources */,
 				EF26A74F2CCCEF2000B7114C /* RelaxViewMainLayout.swift in Sources */,
 				EFD37A2A2CD3E11B0012BDBE /* SwiftDataManager.swift in Sources */,
 				EF26BA0E2CCA86DD007C3CD8 /* RelaxView.swift in Sources */,
 				EF26BA0A2CCA7BBE007C3CD8 /* Font+Avenir.swift in Sources */,
 				EFF115402CD143340038D212 /* JournalModelLocal.swift in Sources */,
+				EF3BC1752CFF5B3000CDD3AD /* MQTTManager.swift in Sources */,
 				EF041D582CD8A0EB0003D03E /* JournalDetailView.swift in Sources */,
 				EF08E6C62CC91D6D00905CCB /* KanshoApp.swift in Sources */,
 				EF0401A02CD9C1BE0024AC10 /* ImagePicker.swift in Sources */,
+				EF4035D42CDE5222006F0AB3 /* RelaxViewModel+Haptic.swift in Sources */,
 				EF1667CB2CCFF4C100F22DAA /* JournalModel.swift in Sources */,
 				EF0401A22CD9C6DC0024AC10 /* JournalCameraView.swift in Sources */,
 				EFE528232CCD722500650C8D /* RelaxViewModel.swift in Sources */,
@@ -548,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF08E6C92CC91D7000905CCB /* KanshoTests.swift in Sources */,
+				EF1307C82D05AB2800402C3E /* RelaxViewUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,6 +909,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF9AB2012D00031600670031 /* XCRemoteSwiftPackageReference "SwiftMQTT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aciidgh/SwiftMQTT";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF9AB2022D00031600670031 /* SwiftMQTT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF9AB2012D00031600670031 /* XCRemoteSwiftPackageReference "SwiftMQTT" */;
+			productName = SwiftMQTT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF7F53162CC16BF100286047 /* Project object */;
 }
