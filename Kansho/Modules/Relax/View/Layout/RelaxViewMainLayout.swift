@@ -76,7 +76,6 @@ struct RelaxViewMainLayout: View {
                 .position(circleCenter)
                 .overlay {
                     ZStack {
-                        // Calculate new positions for the images using trigonometry
                         Button(action: {
                             relaxViewModel.selectedRelaxOption = .Haptic
                         }){

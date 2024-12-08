@@ -110,7 +110,7 @@ struct JournalView: View {
 
 #Preview{
     JournalView()
-        .environmentObject(RelaxViewModel(hapticManager: .init()))
+        .environmentObject(RelaxViewModel(hapticManager: HapticManager()))
         .environmentObject(JournalViewModel())
         .environmentObject(RoutingManager())
 }

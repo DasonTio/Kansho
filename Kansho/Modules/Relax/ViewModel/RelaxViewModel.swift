@@ -4,10 +4,10 @@
 //
 //  Created by Dason Tiovino on 27/10/24.
 //
+
 import SwiftUI
 import Combine
 import AVFoundation
-
 
 enum RelaxOption{
     case Haptic
@@ -30,21 +30,34 @@ class RelaxViewModel: ObservableObject {
     public let defaultMaxTimer:Double = 30
     public var timerCancellable: AnyCancellable?
     public var breathCancellable: AnyCancellable?
-    public var hapticManager: HapticManager
+    public var hapticManager: HapticManagerProtocol
+    public var mqttManager: MQTTManagerProtocol
     
     public var breathInAudio: AVAudioPlayer?
     public var breathOutAudio: AVAudioPlayer?
     
-    init(hapticManager: HapticManager) {
+    init(
+        hapticManager: HapticManagerProtocol,
+        mqttManager: MQTTManagerProtocol = MQTTManager.shared,
+        breathInAudio: AVAudioPlayer? = nil,
+        breathOutAudio: AVAudioPlayer? = nil
+    ) {
         self.hapticManager = hapticManager
+        self.mqttManager = mqttManager
         self.timer = defaultMaxTimer
         
-        guard let breathInAudioPath = Bundle.main.path(forResource: "BreathIn", ofType: "m4a"),
-        let breathOutAudioPath = Bundle.main.path(forResource: "BreathOut", ofType: "m4a") else {
-            return
+        guard let breathInAudio, let breathOutAudio else {
+            guard let breathInAudioPath = Bundle.main.path(forResource: "BreathIn", ofType: "m4a"),
+            let breathOutAudioPath = Bundle.main.path(forResource: "BreathOut", ofType: "m4a") else {
+                return
+            }
+            
+            self.breathInAudio =  try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: breathInAudioPath))
+            self.breathOutAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: breathOutAudioPath))
+            return 
         }
-        breathInAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: breathInAudioPath))
-        breathOutAudio = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: breathOutAudioPath))
+        self.breathInAudio =  breathInAudio
+        self.breathOutAudio = breathOutAudio
     }
     
     var timerDisplay: String {
@@ -54,6 +67,7 @@ class RelaxViewModel: ObservableObject {
     }
     
     func toggleTimer() {
+        mqttManager.publish(topic: "Dason/Mobile/Relax", message: "Hello it's from publisher")
         if isActive {
             stopTimer()
         } else {

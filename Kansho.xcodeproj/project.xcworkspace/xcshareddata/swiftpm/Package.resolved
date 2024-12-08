@@ -1,0 +1,15 @@
+{
+  "originHash" : "745043d124fb05696c0d5ef7e85b3ad33b432737623fc3fd2d90663c4cdd1416",
+  "pins" : [
+    {
+      "identity" : "swiftmqtt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/aciidgh/SwiftMQTT",
+      "state" : {
+        "revision" : "e412d414fbc03cabcee7fcbc8432aa1efb558c94",
+        "version" : "3.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}
