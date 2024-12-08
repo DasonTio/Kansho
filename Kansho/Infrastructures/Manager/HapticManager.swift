@@ -8,7 +8,13 @@
 import CoreHaptics
 import SwiftUI
 
-class HapticManager:ObservableObject {
+protocol HapticManagerProtocol {
+    func prepareHapticEngine()
+    func stopHapticPattern()
+    func generateHapticPattern()
+}
+
+class HapticManager:ObservableObject, HapticManagerProtocol {
     private var engine: CHHapticEngine?
     private var player: CHHapticAdvancedPatternPlayer?
     
@@ -69,5 +75,24 @@ class HapticManager:ObservableObject {
             print("Error creating haptic pattern: \(error)")
         }
     }
+    
+}
 
+
+class MockHapticManager: HapticManagerProtocol {
+    var isHapticEnginePrepared = false
+    var isHapticGenerated = false
+    var isHapticStopped = false
+    
+    func prepareHapticEngine() {
+        isHapticEnginePrepared = true
+    }
+    
+    func generateHapticPattern() {
+        isHapticGenerated = true
+    }
+    
+    func stopHapticPattern() {
+        isHapticStopped = true
+    }
 }

@@ -12,7 +12,7 @@ struct ContentView: View {
     @EnvironmentObject var routingManager: RoutingManager
     @StateObject var journalViewModel: JournalViewModel = .init()
     @StateObject var relaxViewModel: RelaxViewModel = .init(
-        hapticManager: .init()
+        hapticManager: HapticManager()
     )
     
     @State private var currentPage = 1
@@ -73,7 +73,7 @@ struct ContentView: View {
                 }
                 .onAppear{
                     mqttManager.connect()
-//                    mqttManager.subscribe(topic: "Dason/Mobile/Haptic", qos: .qos1)
+                    mqttManager.subscribe(topic: "Dason/Mobile/Relax")
                 }
             }
         }
