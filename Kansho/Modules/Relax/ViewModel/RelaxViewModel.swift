@@ -67,11 +67,12 @@ class RelaxViewModel: ObservableObject {
     }
     
     func toggleTimer() {
-        mqttManager.publish(topic: "Dason/Mobile/Relax", message: "Hello it's from publisher")
         if isActive {
             stopTimer()
+            mqttManager.publish(topic: "Dason/VibratorControl", message: "OFF")
         } else {
             startTimer()
+            mqttManager.publish(topic: "Dason/VibratorControl", message: "ON")
         }
     }
     

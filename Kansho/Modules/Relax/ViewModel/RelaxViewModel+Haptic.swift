@@ -8,7 +8,7 @@
 import Foundation
 
 extension RelaxViewModel {
-    func startHaptic() {
+func startHaptic() {
         hapticManager.generateHapticPattern()
     }
     

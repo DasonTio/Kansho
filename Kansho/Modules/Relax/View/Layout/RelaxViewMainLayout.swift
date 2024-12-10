@@ -56,7 +56,7 @@ struct RelaxViewMainLayout: View {
             
             Image(relaxViewModel.plantImage)
                 .alignmentGuide(.bottom) { _ in 0 }
-                .position(x: width * 50, y: height * 40)
+                .position(x: width * 50, y: height * 48.5)
                 .animation(.easeInOut, value: relaxViewModel.plantImage)
         }
     }
