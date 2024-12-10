@@ -63,7 +63,7 @@ class HapticManager:ObservableObject, HapticManagerProtocol {
             
             // Create the haptic pattern
             let pattern = try CHHapticPattern(events: [event], parameterCurves: [intensityCurve])
-            doc://com.apple.documentation/186btzw
+            
             if let engine = engine {
                 let advancedPlayer = try engine.makeAdvancedPlayer(with: pattern)
                 advancedPlayer.loopEnabled = true

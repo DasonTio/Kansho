@@ -23,7 +23,7 @@ class MQTTManager: MQTTManagerProtocol, MQTTSessionDelegate {
     
     private init(){
         session = MQTTSession(
-            host: "broker.hivemq.com",
+            host: "192.168.3.124",
             port: 1883,
             clientID: "kansho-mqtt-client",
             cleanSession: true,
@@ -54,7 +54,7 @@ class MQTTManager: MQTTManagerProtocol, MQTTSessionDelegate {
     }
     
     public func publish(topic: String, message: String){
-        let json = ["message" : message]
+        let json = [message]
         let data = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         
         session.publish(data, in: topic, delivering: .atLeastOnce, retain: false){error in 
