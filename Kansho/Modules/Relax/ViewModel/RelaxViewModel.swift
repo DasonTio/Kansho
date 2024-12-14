@@ -119,6 +119,7 @@ class RelaxViewModel: ObservableObject {
     private func resetTimer() {
         stopTimer()
         updatePlantImage()
+        mqttManager.publish(topic: "Dason/VibratorControl", message: "OFF")
     }
     
     private func updatePlantImage() {
