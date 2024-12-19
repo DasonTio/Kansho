@@ -23,9 +23,9 @@ class MQTTManager: MQTTManagerProtocol, MQTTSessionDelegate {
     
     private init(){
         session = MQTTSession(
-            host: "192.168.3.124",
+            host: "192.168.250.171",
             port: 1883,
-            clientID: "kansho-mqtt-client",
+            clientID: "kansho-mqtt-client-swift",
             cleanSession: true,
             keepAlive: 15
         )
@@ -36,7 +36,7 @@ class MQTTManager: MQTTManagerProtocol, MQTTSessionDelegate {
     public func connect(){
         session.connect { error in
             if error == .none {
-                self.subscribe(topic: "Dason/Mobile/Relax")
+                self.subscribe(topic: "Dason/VibratorControl")
             }else{
                 print(error.description)
             }
@@ -54,10 +54,8 @@ class MQTTManager: MQTTManagerProtocol, MQTTSessionDelegate {
     }
     
     public func publish(topic: String, message: String){
-        let json = [message]
-        let data = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         
-        session.publish(data, in: topic, delivering: .atLeastOnce, retain: false){error in 
+        session.publish(Data(message.utf8), in: topic, delivering: .atLeastOnce, retain: false){error in
             if error == .none {
                 print("Published data in \(topic)!")
             } else {
